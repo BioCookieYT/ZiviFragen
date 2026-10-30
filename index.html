@@ -78,11 +78,45 @@ foot a{color:#4b4268}
 #cf{position:fixed;inset:0;pointer-events:none;z-index:120}
 .hide{display:none!important}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ===== PAY2WIN ULTRA ===== */
+.bl{animation:bl .8s steps(2) infinite}@keyframes bl{50%{opacity:.2}}
+.cd{animation:bl 1s steps(2) infinite}
+.mq{overflow:hidden;white-space:nowrap;background:linear-gradient(90deg,var(--pk),var(--g),var(--pk));color:#1a0a00;font-weight:800;font-size:13px;padding:5px 0}
+.mq span{display:inline-block;padding-left:100%;animation:mq 16s linear infinite}@keyframes mq{to{transform:translateX(-100%)}}
+.flash{animation:fb 1s steps(2) infinite}@keyframes fb{50%{box-shadow:0 0 0 3px var(--g),0 0 40px var(--pk)}}
+#upb{animation:sh 4s linear infinite,fb 1s steps(2) infinite}
+.stk{position:fixed;left:0;right:0;bottom:0;z-index:80;display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px));background:#e11d48;color:#fff;font-weight:800;font-size:13px;text-align:center}
+body{padding-bottom:64px}
+.toast{bottom:calc(70px + env(safe-area-inset-bottom,0px))}
+.ck{right:auto;left:14px;bottom:calc(70px + env(safe-area-inset-bottom,0px))}
+.chat{position:fixed;right:14px;bottom:calc(70px + env(safe-area-inset-bottom,0px));z-index:96;width:min(360px,calc(100vw - 28px));height:min(440px,60vh);display:flex;flex-direction:column;background:#150f26;box-shadow:0 0 50px rgba(168,85,247,.5);overflow:hidden;animation:pop .3s}
+.chh{display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--gb);background:rgba(255,255,255,.05)}
+.cb{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+.bb{max-width:84%;padding:8px 12px;border-radius:14px;font-size:14px;line-height:1.35;overflow-wrap:anywhere}
+.bb.ch{background:#2a1f45;align-self:flex-start;border-bottom-left-radius:4px}
+.bb.me{background:linear-gradient(110deg,var(--p),var(--pk));align-self:flex-end;border-bottom-right-radius:4px}
+.bb.sys{align-self:center;background:rgba(255,61,129,.18);font-size:12px;text-align:center;max-width:95%}
+.bb .bk{filter:blur(6px);user-select:none;display:block;margin-bottom:6px}
+.chf{display:flex;gap:6px;padding:8px 10px 0}
+.chat input{font-size:15px;padding:10px 12px;border-radius:12px}
+#cl{position:fixed;right:14px;bottom:calc(120px + env(safe-area-inset-bottom,0px));z-index:71}
+#cl i{position:absolute;top:-6px;right:-6px;background:#e11d48;border-radius:99px;font-style:normal;font-size:11px;padding:1px 6px}
+.ga{position:relative;height:260px;overflow:hidden;border:1px solid var(--gb);border-radius:14px;margin-top:8px;background:rgba(255,255,255,.04);touch-action:manipulation}
+.t{position:absolute;top:-40px;font-size:34px;cursor:pointer;user-select:none;animation:fall linear forwards}@keyframes fall{to{transform:translateY(320px)}}
+.pw{position:fixed;z-index:97;width:250px;max-width:calc(100vw - 20px);background:#1d1236;border:2px solid var(--g);border-radius:12px;box-shadow:0 0 30px rgba(251,191,36,.45);animation:pop .3s;font-size:13px;overflow:hidden}
+.pw.shake{animation:sk .4s}
+.pwh{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 8px;background:linear-gradient(90deg,var(--pk),var(--g));color:#1a0a00;font-weight:800}
+.pwx{border:0;background:#1a0a00;color:#fff;border-radius:6px;width:22px;height:22px;cursor:pointer;font-size:11px}
+.pwb{display:flex;gap:10px;align-items:center;padding:10px}
+.ins{position:fixed;z-index:98;padding:8px 14px;background:#e11d48;color:#fff;font:900 clamp(15px,4vw,22px) system-ui;border-radius:12px;box-shadow:0 0 30px rgba(225,29,72,.8);pointer-events:none;animation:pop .25s,to .3s 2.5s forwards}
+.ins small{display:block;font-size:10px;font-weight:700;opacity:.85}
+.lbr{display:flex;justify-content:space-between;font-size:14px;padding:4px 0;color:var(--mute)}
 </style>
 </head>
 <body>
 <div class="bg"></div><canvas id="cf"></canvas>
-<header class="top"><div class="w"><a class="logo" href="#">ZiviCheat Premium™ <small id="tag">FREE</small></a><a class="btn sm" id="upb" href="#freischalten">🔓 Upgrade</a></div></header>
+<header class="top"><div class="w"><a class="logo" href="#">ZiviCheat Premium™ <small id="tag">FREE</small></a><button class="btn sm ghost" id="cc" title="Coins">🪙 3</button><a class="btn sm" id="upb" href="#freischalten">🔓 Upgrade</a></div></header><div class="mq sup"><span>🔥 NUR HEUTE −87 % ★ 🎰 GEWINNER! ★ 🚑 Charlie ist in deiner Nähe ★ 🪙 100 Coins nur 9,99 € ★ 👑 Kauf dir den Sieg ★ ⚠️ Dein Lernstand ist in Gefahr ★ </span></div><div class="stk sup"><span class="bl">🔥 LETZTE CHANCE</span> Zivi Ultra −87 % · endet in <span class="cd">14:59</span> <a class="btn sm" href="#freischalten">Jetzt kaufen</a></div>
 <div class="w" id="app"></div>
 <foot>© ZiviCheat Premium™ – mit der Nutzung stimmst du unseren <a href="#agb">AGB</a> zu (Satire, es wird nichts abgebucht)</foot>
 <script>
@@ -95,7 +129,7 @@ const $=s=>document.querySelector(s);
 const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const mem={};const rev=new Set();
 const st={get(k){try{return localStorage.getItem(k)}catch(e){return mem[k]??null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){mem[k]=v}}};
-let prem=st.get("zc_prem")==="1",cat="Alle",qs=+st.get("zc_q")||0,secs=899,coins=st.get("zc_coin")===null?3:+st.get("zc_coin");
+let prem=st.get("zc_prem")==="1",cat="Alle",qs=+st.get("zc_q")||0,secs=899,coins=st.get("zc_coin")===null?3:+st.get("zc_coin"),en=st.get("zc_en")===null?3:+st.get("zc_en");
 const fmt=n=>String(n).padStart(2,"0");
 // timer
 setInterval(()=>{secs=secs<=1?899:secs-1;document.querySelectorAll(".cd").forEach(e=>e.textContent=fmt(secs/60|0)+":"+fmt(secs%60))},1000);
@@ -117,20 +151,24 @@ function setPrem(){$("#tag").textContent=prem?"PREMIUM ✦ PAY2WIN":"FREE";$("#u
 // home
 function home(){
   $("#app").innerHTML=`
-  ${prem?"":`<div class="ad"><span>📢 Werbung: Du siehst Werbung. Das ist kein Bug.</span><a class="btn sm" href="#freischalten">Werbung entfernen</a></div>`}
-  <section class="hero glass"><h1>${prem?"Willkommen, Premium-Zivi 👑":"Nur 5 von "+DATA.length+" Fragen gratis."}</h1>
+  ${prem?"":`<div class="ad flash"><span class="bl">📢 Werbung: Du siehst Werbung. Das ist kein Bug.</span><a class="btn sm" href="#freischalten">Werbung entfernen</a></div>`}
+  <section class="hero glass ${prem?"":"flash"}"><h1>${prem?"Willkommen, Premium-Zivi 👑":"Nur 5 von "+DATA.length+" Fragen gratis."}</h1>
   <p>${prem?"Alle Fragen sind entsperrt. Du bist jetzt offiziell im Vorteil.":"Alles andere ist verschlüsselt, geblurrt und hinter einem Schloss. Stell dir vor, du bestehst die Prüfung. Das kostet extra."}</p>
   ${prem?"":`<div class="bar"><i></i></div><div style="font-size:13px;color:var(--mute)">Dein Lernfortschritt: 3,9 % · 🎯 Bestehenswahrscheinlichkeit: <b style="color:var(--pk)">12 %</b> (mit Premium: 97 %) · 👀 <span id="lv">41</span> Leute schauen gerade · Angebot endet in ${cdh()}</div>`}</section>
-  ${prem?"":`<button class="btn ghost" id="lb" style="width:100%;margin-bottom:12px">🎁 Gratis-Lootbox öffnen (1× täglich)</button>`}<div class="sb"><input id="q" type="search" placeholder="Frage oder Antwort suchen …" autocomplete="off" aria-label="Suche"></div>
+  ${prem?"":`<button class="btn" id="gm" style="width:100%;margin-bottom:10px">🎮 Coins erspielen · ⚡ ${en}/3</button><button class="btn ghost" id="lb" style="width:100%;margin-bottom:12px">🎁 Gratis-Lootbox öffnen (1× täglich)</button>`}
+  <section class="glass" style="padding:14px 18px;margin-bottom:12px"><b>🏆 Zivi-Rangliste · Season 4</b>
+  ${[["👑 ZiviKing_Ultra","9.999 P."],["👑 Sani_Charlie_official","9.871 P."],["👑 ProfiPendler","9.540 P."]].map(r=>`<div class="lbr"><span>${prem?"":""}${r[0]}</span><span>${r[1]}</span></div>`).join("")}
+  <div class="lbr" style="${prem?"":"color:var(--pk)"}"><span>${prem?"👑 #1 Du (Pay2Win-Zivi)":"#48.211 Du · Praktikant"}</span><span>${prem?"10.000 P.":"0 P."}</span></div>
+  ${prem?"":`<div style="font-size:12px;color:var(--mute)">Platz 1 gibt's für 14,99 €. Fleiß ist nicht vorgesehen.</div>`}</section><div class="sb"><input id="q" type="search" placeholder="Frage oder Antwort suchen …" autocomplete="off" aria-label="Suche"></div>
   <div class="chips" id="chips">${cats.map((c,i)=>`<button class="chip ${i&&!prem?"lc":""}" aria-pressed="${c===cat}" data-c="${esc(c)}">${i&&!prem?"🔒 ":""}${esc(c)}</button>`).join("")}</div>
   <div class="meta"><span id="cnt"></span><span id="lim">${prem?"Suchen: ∞":""}</span></div>
   <div id="qb" class="glass hide" style="padding:12px 16px;margin-bottom:10px"></div><div id="list"></div>`;
   $("#chips").onclick=e=>{const b=e.target.closest(".chip");if(!b)return;if(!prem&&b.dataset.c!=="Alle")return upsell("Kategorien sind ein Premium-Feature");cat=b.dataset.c;
     document.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));render()};
-  let t;$("#q").oninput=()=>{clearTimeout(t);t=setTimeout(go,350)};$("#lb")&&($("#lb").onclick=lootbox);
+  let t;$("#q").oninput=()=>{clearTimeout(t);t=setTimeout(go,350)};$("#lb")&&($("#lb").onclick=lootbox);$("#gm")&&($("#gm").onclick=game);
   setLim();render();
 }
-const setLim=()=>{const e=$("#lim");if(e&&!prem)e.textContent=`Gratis-Suchen: ${Math.max(0,LIMIT-qs)}/${LIMIT} · 🪙 ${coins} Coins`};
+const setLim=()=>{const e=$("#lim");if(e&&!prem)e.textContent=`Gratis-Suchen: ${Math.max(0,LIMIT-qs)}/${LIMIT} · 🪙 ${coins} Coins`;const c=$("#cc");c&&(c.textContent=prem?"🪙 ∞":"🪙 "+coins)};
 function go(){
   const v=$("#q").value.trim();if(!v||prem)return render();
   if(qs>=LIMIT){$("#q").value="";upsell("Tageslimit erreicht (5 Suchen)");return render()}
@@ -147,7 +185,7 @@ function render(){
   $("#list").innerHTML=res.length?res.map(d=>{const lk=!prem&&d.id>=FREE,sh=prem||(!lk&&rev.has(d.id));
     return `<article class="q glass ${lk?"lk":""}"><div class="in"><div class="k">${esc(d.kat)}</div><h2>${hl(d.frage,d.nf,toks)}</h2><ul>${d.optionen.map((o,i)=>`<li class="${o.r&&sh?"r":""}"><b>${o.r&&sh?"✓":"–"}</b><span>${hl(o.t,d.no[i],toks)}</span></li>`).join("")}</ul></div>${!prem&&!lk&&!sh?`<div style="padding-top:12px"><button class="btn sm" data-r="${d.id}">🪙 Lösung aufdecken (1 Coin)</button></div>`:""}${lk?`<div class="ov"><span>🔒</span><b>Premium-Frage</b><small>Ab 4,99 €/Monat* (Mindestlaufzeit 36 Monate)</small><button class="btn sm" data-u>Freischalten</button></div>`:""}</article>`}).join(""):`<p style="text-align:center;color:var(--mute);padding:40px 0">Keine Treffer. Vielleicht ist die Antwort hinter der Paywall. 😉</p>`;
   document.querySelectorAll("[data-u]").forEach(b=>b.onclick=()=>upsell("Diese Frage ist gesperrt"));
-  document.querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>{if(coins<1)return modal(`<div style="font-size:44px">🪙</div><h3>Keine Coins mehr</h3><p>100 Coins nur 9,99 €. Das sind 0,10 € pro Lösung. Oder Ultra für alles.</p><div class="row"><a class="btn" href="#freischalten" data-x>Coins aufladen</a><button class="btn ghost" data-x>Später</button></div>`);coins--;st.set("zc_coin",coins);rev.add(+b.dataset.r);setLim();render()});
+  document.querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>{if(coins<1)return modal(`<div style="font-size:44px">🪙</div><h3>Keine Coins mehr</h3><p>100 Coins nur 9,99 €. Das sind 0,10 € pro Lösung. Oder Ultra für alles.</p><div class="row"><a class="btn" href="#freischalten" data-x>Coins aufladen</a><button class="btn ghost" data-x data-g>🎮 Coins erspielen</button></div>`);coins--;st.set("zc_coin",coins);setLim();const id=+b.dataset.r;adGate(()=>{rev.add(id);render()})});
 }
 // unlock page
 function unlock(){
@@ -156,7 +194,8 @@ function unlock(){
   <button class="btn" id="go">Key einlösen</button> ${prem?'<button class="btn ghost" id="rs">Premium zurücksetzen</button>':""}</section>
   <h2 style="text-align:center;margin:26px 0 0">Noch keinen Key? Kauf dir den Sieg. 🏆</h2><p style="text-align:center;color:var(--mute);margin:4px 0">Angebot endet in ${cdh()} · 🔥 Nur noch 3 Keys!</p>
   <div class="tiers">
-  ${[["Zivi Basic","4,99","24,99","+5 Fragen*",["5 weitere Fragen","Werbung bleibt","Warteschlange: Platz 12"]],["Zivi Pro","19,99","99,99","+50 Fragen*",["50 weitere Fragen","Kategorien ansehen","Warteschlange: Platz 2"]],["Zivi Ultra 👑","49,99","399,99","ALLE Fragen",["Alle "+DATA.length+" Fragen","Keine Werbung","Richtig-Marker ✓","Kein Warten","Pay2Win-Badge ✦"]]].map((t,i)=>`<div class="card glass ${i==2?"best":""}"><h4>${t[0]}</h4><div class="pr">${t[1]} €<small style="font-size:13px">/Monat</small> <s>${t[2]} €</s></div><b style="color:var(--g)">${t[3]}</b><ul>${t[4].map(x=>`<li>✓ ${x}</li>`).join("")}</ul><button class="btn sm" style="width:100%;margin-top:10px" data-b="${i}">Jetzt kaufen</button></div>`).join("")}</div>
+  ${[["Zivi Basic","4,99","24,99","+5 Fragen*",["5 weitere Fragen","Werbung bleibt","Warteschlange: Platz 12"]],["Zivi Pro","19,99","99,99","+50 Fragen*",["50 weitere Fragen","Kategorien ansehen","Warteschlange: Platz 2","Charlie: 3 Nachrichten gratis*"]],["Zivi Ultra 👑","49,99","399,99","ALLE Fragen",["Alle "+DATA.length+" Fragen","Keine Werbung","Richtig-Marker ✓","Kein Warten","Pay2Win-Badge ✦","Charlie gratis chatten","Coin-Jagd ×10","Platz 1 in der Rangliste","Charlie beleidigt dich nicht mehr"]]].map((t,i)=>`<div class="card glass ${i==2?"best":""}"><h4>${t[0]}</h4><div class="pr">${t[1]} €<small style="font-size:13px">/Monat</small> <s>${t[2]} €</s></div><b style="color:var(--g)">${t[3]}</b><ul>${t[4].map(x=>`<li>✓ ${x}</li>`).join("")}</ul><button class="btn sm" style="width:100%;margin-top:10px" data-b="${i}">Jetzt kaufen</button></div>`).join("")}</div>
+  <h2 style="text-align:center;margin:26px 0 8px">🛒 Item-Shop</h2><div class="tiers">${[["🪙","100 Coins","9,99 €"],["🪙🪙","500 Coins + 50 Bonus*","39,99 €"],["⚡","Energie-Refill ×5","2,99 €"],["🤐","Charlie-Schweigegeld (4 Min.)","2,99 €"],["🏆","Platz 1 in der Rangliste","14,99 €"],["📵","Werbefrei-Stunde","0,99 €"],["🎁","Lootbox ×3 (0 % Gewinnchance)","4,99 €"],["☕","Kaffee-Boost für Charlie","1,99 €"]].map(x=>`<div class="card glass" style="text-align:center"><div style="font-size:32px">${x[0]}</div><b>${x[1]}</b><div class="pr" style="font-size:22px">${x[2]}</div><button class="btn sm" data-b="9">Kaufen</button></div>`).join("")}</div>
   <p class="agb" style="text-align:center">* Preise zzgl. Servicegebühr, Bearbeitungsgebühr und Gebühr für die Gebühr. Siehe <a href="#agb">AGB</a>.</p>`;
   const chk=()=>{const v=$("#k").value.trim();const m=$("#msg");
     if(v===KEY){prem=true;st.set("zc_prem","1");setPrem();m.style.color="var(--ok)";m.textContent="🎉 Key gültig! Du bist jetzt Pay2Win-Zivi.";confetti();setTimeout(()=>location.hash="",1800)}
@@ -166,7 +205,7 @@ function unlock(){
   document.querySelectorAll("[data-b]").forEach(b=>b.onclick=()=>modal(`<div style="font-size:44px">💳</div><h3>Zahlung abgelehnt</h3><p>Dein Zahlungsanbieter hat „Zivildienst-Gehalt“ als Sicherheit abgelehnt. (Das ist eine Spaßseite, es wird nichts abgebucht.)</p><button class="btn" data-x>Okay</button>`));
 }
 // AGB
-function agb(){const c=["Diese Seite ist Satire. Alle Preise, Laufzeiten und Drohungen sind erfunden.","Der Nutzer erkennt an, dass Wissen kein Grundrecht, sondern ein Abo-Modell ist.","Fragen 6 bis "+DATA.length+" sind ausschließlich für Nutzer mit ausgeprägtem Pflichtbewusstsein sichtbar.","Premium verlängert sich automatisch alle 5 Minuten um weitere 5 Minuten. Kündigung nur schriftlich per Brieftaube.","Die Mindestlaufzeit beträgt 36 Monate, der Zivildienst dauert aber nur 9. Das Delta ist Verhandlungssache.","Der Betreiber darf Antwort b jederzeit für falsch erklären, auch wenn sie richtig ist.","Der Nutzer verzichtet auf sein Seelenheil sowie auf den Kaffee aus der Teeküche.","Produktkeys bleiben Eigentum des Betreibers. Ein Weitergeben an Kameraden gilt als Wehrkraftzersetzung.","Eine Gebühr für die Servicegebühr (2,50 €) ist im Preis nicht enthalten.","Wer die Cookies ablehnt, zahlt 2,99 € Ablehnungsgebühr.","Blur-Effekte sind kein Mangel, sondern Feature. Eine Brille ändert daran nichts.","Bei Nichtbestehen der Prüfung besteht Anspruch auf kein Geld zurück, aber auf Mitleid (nicht einklagbar).","Gerichtsstand ist der Beifahrersitz.","Charlie darf jederzeit in deiner Nähe auftauchen. Die Entfernung wird nicht garantiert.","Coins verfallen sofort, außer du zahlst. Dann verfallen sie auch, aber langsamer.","Lootboxen sind kein Glücksspiel, weil man nie gewinnt."];
+function agb(){const c=["Diese Seite ist Satire. Alle Preise, Laufzeiten und Drohungen sind erfunden.","Der Nutzer erkennt an, dass Wissen kein Grundrecht, sondern ein Abo-Modell ist.","Fragen 6 bis "+DATA.length+" sind ausschließlich für Nutzer mit ausgeprägtem Pflichtbewusstsein sichtbar.","Premium verlängert sich automatisch alle 5 Minuten um weitere 5 Minuten. Kündigung nur schriftlich per Brieftaube.","Die Mindestlaufzeit beträgt 36 Monate, der Zivildienst dauert aber nur 9. Das Delta ist Verhandlungssache.","Der Betreiber darf Antwort b jederzeit für falsch erklären, auch wenn sie richtig ist.","Der Nutzer verzichtet auf sein Seelenheil sowie auf den Kaffee aus der Teeküche.","Produktkeys bleiben Eigentum des Betreibers. Ein Weitergeben an Kameraden gilt als Wehrkraftzersetzung.","Eine Gebühr für die Servicegebühr (2,50 €) ist im Preis nicht enthalten.","Wer die Cookies ablehnt, zahlt 2,99 € Ablehnungsgebühr.","Blur-Effekte sind kein Mangel, sondern Feature. Eine Brille ändert daran nichts.","Bei Nichtbestehen der Prüfung besteht Anspruch auf kein Geld zurück, aber auf Mitleid (nicht einklagbar).","Gerichtsstand ist der Beifahrersitz.","Charlie darf jederzeit in deiner Nähe auftauchen. Die Entfernung wird nicht garantiert.","Coins verfallen sofort, außer du zahlst. Dann verfallen sie auch, aber langsamer.","Lootboxen sind kein Glücksspiel, weil man nie gewinnt.","Beleidigungen durch Charlie sind kein Mangel, sondern Kundenbindung.","Der Betreiber darf 📢 in der Coin-Jagd beliebig platzieren. Treffer kosten Punkte, Mitleid ist inklusive.","Nachrichten an Charlie kosten 1 Coin. Jede dritte Antwort ist aus Prinzip unleserlich.","Pop-ups lassen sich schließen. Meistens. Nach dem dritten Versuch."];
   $("#app").innerHTML=`<section class="hero glass agb"><h1 style="color:var(--tx)">Allgemeine Geschäftsbedingungen</h1>${c.map((x,i)=>`<h3>§ ${i+1}</h3><div>${x}</div>`).join("")}<p><a href="#">← Zurück</a></p></section>`}
 function route(){const h=location.hash.slice(1);scrollTo(0,0);h==="freischalten"?unlock():h==="agb"?agb():home();$("#cf").width=$("#cf").width}
 addEventListener("hashchange",route);setPrem();route();
@@ -179,10 +218,69 @@ if(!prem)setTimeout(()=>{const c=document.createElement("div");c.className="ck g
 function lootbox(){const o=["💩 Nichts. Nochmal öffnen für 0,99 €?","🎟️ −3 % Rabatt auf Zivi Ultra (nicht kombinierbar, nicht gültig)","🪙 +0 Coins. Glückwunsch!","👑 LEGENDÄR: 1 Minute Premium! (läuft ab, bevor du es nutzt)","🧦 Ein virtuelles Paar Socken"];
   const m=modal(`<div style="font-size:56px" class="shake">🎁</div><h3>Lootbox wird geöffnet …</h3>`);
   setTimeout(()=>{m.querySelector(".box").innerHTML=`<h3>${o[Math.random()*o.length|0]}</h3><p>Du hast heute keine weiteren Öffnungen. Zusätzliche Lootboxen: 3 für 4,99 €.</p><div class="row"><a class="btn" href="#freischalten" data-x>Mehr Lootboxen</a><button class="btn ghost" data-x>Schließen</button></div>`},1400)}
-let km=2;
-function charlie(){if(document.querySelector(".mod"))return;const m=modal(`<div style="font-size:48px">📍🚑</div><h3>Charlie ist ${String(km).replace(".",",")} km entfernt von dir</h3><p>Dein Lieblingssani ist in deiner Nähe und hat gerade nach dir gefragt. 👀</p><div class="row"><button class="btn" id="cw">💬 Nachricht schreiben</button><button class="btn ghost" data-x>Ignorieren</button></div><span class="tiny">Premium-Feature: Schreiben, Anrufen, Mitfahren</span>`);
-  $("#cw").onclick=()=>{m.remove();prem?modal(`<div style="font-size:44px">🚑</div><h3>Charlie:</h3><p>„Ey, hör auf zu daddeln und lern!“</p><button class="btn" data-x>Okay, Charlie</button>`):upsell("Charlie schreiben ist Premium")};km=Math.max(.2,+(km-.4).toFixed(1))}
+/*CHARLIE_NEU*/
+// ===== PAY2WIN ULTRA: Pop-ups, Charlie-Chat, Coin-Jagd =====
+let km=2,nad=0,un=0,rc=0,first=1,tb=0;
+const ADS=[["🎰","GEWINNER!","Du bist der 1.000.000ste Besucher! Gewinn: 0 Coins."],["⚠️","Lernstand in Gefahr","Ohne Premium vergisst du 94 % bis morgen."],["🔥","NUR HEUTE −87 %","Zivi Ultra für 49,99 € statt 399,99 €"],["💘","Sanis in deiner Nähe","3 Rettungssanitäter suchen dich. Premium nötig."],["🛡️","Streak-Schutz","Verlier deine Serie nicht! Nur 1,99 €"],["📦","Coin-Bundle","1000 Coins für 99,99 € – ein Schnäppchen!"],["🦠","Browser zu langsam","Premium macht ihn 400 % schneller (Placebo)."]];
+function spawnAd(){if(prem||nad>=4||document.querySelector(".mod"))return;nad++;const a=ADS[Math.random()*ADS.length|0],w=document.createElement("div");w.className="pw sup";
+  w.style.left=Math.random()*Math.max(0,innerWidth-260)+"px";w.style.top=(80+Math.random()*Math.max(0,innerHeight-260))+"px";
+  w.innerHTML=`<div class="pwh"><b class="bl">${a[1]}</b><button class="pwx" aria-label="Schließen">✕</button></div><div class="pwb"><span style="font-size:30px">${a[0]}</span><span>${a[2]}</span></div><a class="btn sm" href="#freischalten" style="margin:0 10px 10px">Jetzt zuschlagen</a>`;
+  let c=0;const x=w.querySelector(".pwx");x.onclick=()=>{if(++c<3){w.querySelector(".pwh").style.flexDirection=c%2?"row-reverse":"row";x.textContent=["✕","✖","✘"][c];w.classList.remove("shake");void w.offsetWidth;w.classList.add("shake")}else{w.remove();nad--}};
+  document.body.append(w)}
+setTimeout(spawnAd,3500);setInterval(spawnAd,6500);
+// Charlie beleidigt
+const INS=["SCHEISS ZIVI!","SCHEISS ZIVI! LERN!","ZIVI, DU LOSER!","KAFFEE, ZIVI! SOFORT!","SCHEISS ZIVI!!!"],NICE=["Hallo Chef 👑","Respekt, Premium-Zivi!","Charlie holt dir Kaffee ☕"];
+function insult(){setTimeout(insult,6000+Math.random()*7000);if(document.querySelector(".mod")||(prem&&Math.random()<.7))return;
+  const e=document.createElement("div");e.className="ins";e.innerHTML=`<small>🚑 Charlie</small>${(prem?NICE:INS)[Math.random()*(prem?NICE:INS).length|0]}`;
+  e.style.left=Math.random()*Math.max(0,innerWidth-260)+"px";e.style.top=(80+Math.random()*Math.max(0,innerHeight-220))+"px";e.style.rotate=(Math.random()*10-5)+"deg";document.body.append(e);setTimeout(()=>e.remove(),2900)}
+setTimeout(insult,5000);
+// Werbe-Gate vor Lösung
+function adGate(cb){let n=5;const m=modal(`<div style="font-size:44px">📺</div><h3>Werbung</h3><p>Lösung wird entschlüsselt in <b class="bl" id="ag2">5</b> s …<br><small>Nicht schließen, sonst ist dein Coin weg!</small></p><div class="bar"><i id="agb" style="width:0"></i></div><button class="tiny" data-u3>Werbung überspringen (Premium)</button>`);
+  m.querySelector("[data-u3]").onclick=ev=>{ev.stopPropagation();upsell("Überspringen ist Premium")};
+  const iv=setInterval(()=>{n--;if(!document.body.contains(m))return clearInterval(iv);const a=m.querySelector("#ag2"),p=m.querySelector("#agb");a&&(a.textContent=n);p&&(p.style.width=(5-n)*20+"%");if(n<=0){clearInterval(iv);m.remove();cb()}},1000)}
+// Minigame: Coin-Jagd
+function game(){
+  if(en<1)return modal(`<div style="font-size:44px">🔋</div><h3>Energie leer</h3><p>Nächste Energie in 23:59:59. Oder 5 ⚡ für nur 2,99 €.</p><div class="row"><a class="btn" href="#freischalten" data-x>Energie kaufen</a><button class="btn ghost" data-x>Warten</button></div>`);
+  en--;st.set("zc_en",en);let s=0,t=15,done=0;const gm=$("#gm");gm&&(gm.textContent=`🎮 Coins erspielen · ⚡ ${en}/3`);
+  const m=modal(`<h3>🪙 Coin-Jagd</h3><p style="margin:0">Fang 🪙 (+1) und ⭐ (+3). Meide 📢 (−3)!</p><div class="ga" id="ga"></div><div style="margin-top:10px"><b id="gs">0</b> Punkte · ⏱ <b id="gt">15</b> s</div>`);
+  const ga=m.querySelector("#ga");
+  const end=()=>{if(done)return;done=1;clearInterval(sp);clearInterval(tm);if(!document.body.contains(m))return;const g=Math.min(3,s/8|0);coins+=g;st.set("zc_coin",coins);setLim();
+    m.querySelector(".box").innerHTML=`<div style="font-size:44px">🏁</div><h3>${s} Punkte</h3><p>Gewonnen: <b>+${g} 🪙</b>${g<3?"<br>Für mehr Coins: Premium = ×10":""}</p><div class="row"><button class="btn" id="ag">▶ Nochmal (⚡ ${en})</button><button class="btn ghost" id="dbl">📺 Verdoppeln</button><button class="btn ghost" data-x>Schließen</button></div>`;
+    m.querySelector("#ag").onclick=()=>{m.remove();game()};
+    m.querySelector("#dbl").onclick=()=>{m.querySelector(".box").innerHTML=`<div style="font-size:44px">📺</div><h3>Fehler 402</h3><p>Werbung konnte nicht geladen werden. Verdoppeln ist nur mit Premium möglich.</p><div class="row"><a class="btn" href="#freischalten" data-x>Premium holen</a><button class="btn ghost" data-x>Schließen</button></div>`}};
+  const sp=setInterval(()=>{if(!document.body.contains(m))return end();const r=Math.random(),k=r<.2?"📢":r<.28?"⭐":"🪙",e=document.createElement("span");e.className="t";e.textContent=k;e.style.left=Math.random()*85+"%";e.style.animationDuration=(1.2+Math.random()*1.2)+"s";
+    e.onpointerdown=()=>{s=Math.max(0,s+(k==="📢"?-3:k==="⭐"?3:1));m.querySelector("#gs").textContent=s;e.remove();k==="📢"&&spawnAd()};e.onanimationend=()=>e.remove();ga.append(e)},380);
+  const tm=setInterval(()=>{t--;const g=m.querySelector("#gt");g&&(g.textContent=t);if(t<=0)end()},1000)}
+// Charlie-Chatfenster
+const chat=document.createElement("div");chat.className="chat glass hide";
+chat.innerHTML=`<div class="chh"><span style="font-size:26px">🚑</span><div style="flex:1"><b>Charlie</b><div id="chs" style="font-size:12px;color:var(--ok)"></div></div><button class="tiny" id="chx" style="width:auto;margin:0;font-size:18px" aria-label="Schließen">✕</button></div><div class="cb" id="chb"></div><div class="chf"><input id="chi" type="text" placeholder="Nachricht an Charlie …" autocomplete="off" aria-label="Nachricht"><button class="btn sm" id="chsend">Senden</button></div><div class="tiny" id="chp" style="margin:6px 0 8px;cursor:default;text-align:center"></div>`;
+document.body.append(chat);
+const cl=document.createElement("button");cl.id="cl";cl.className="btn sm";cl.innerHTML='🚑 Charlie <i class="bl" id="bd" hidden>0</i>';document.body.append(cl);
+const bd=()=>{const b=$("#bd");b.textContent=un;b.hidden=!un};
+const stat=()=>{$("#chs").textContent=`● online · ${String(km).replace(".",",")} km entfernt`};
+function openChat(){chat.classList.remove("hide");un=0;bd();stat();$("#chp").textContent=prem?"👑 Premium: Nachrichten gratis":"1 🪙 pro Nachricht · jede 3. Antwort nur mit Premium";$("#chb").scrollTop=1e9;$("#chi").focus()}
+cl.onclick=()=>chat.classList.contains("hide")?openChat():chat.classList.add("hide");$("#chx").onclick=()=>chat.classList.add("hide");
+function say(t,k,lock){const d=document.createElement("div");d.className="bb "+k;
+  if(k==="sys")d.innerHTML=t;else if(lock){d.innerHTML=`<span class="bk">${esc(t)}</span><button class="btn sm">🔒 Premium zum Lesen</button>`;d.querySelector("button").onclick=()=>upsell("Charlies Nachricht ist Premium")}else d.textContent=t;
+  const b=$("#chb");b.append(d);b.scrollTop=b.scrollHeight;if(k==="ch"&&chat.classList.contains("hide")){un++;bd()}}
+const RP=[[/hilfe|antwort|l[oö]sung|frage/i,["Lösungen gibt's nur mit Premium. Selber denken ist Zivi-Arbeit.","Lösung? Kostet 1 Coin, Zivi. Oder 49,99 € im Monat."]],[/^(hi|hallo|hey|servus)/i,["Was willst du, Zivi?","Ich hab Dienst. Du hast Zeit zum Daddeln, oder?"]],[/kaffee/i,["Kaffee? Hol dir selber einen. Oder kauf den Kaffee-Boost ☕ für 1,99 €."]],[/premium|key|schl[uü]ssel/i,["Den Key? Frag nicht mich. Ich bin nur ein armer Sani. (Ich krieg Provision.)"]],[/danke/i,["Danke gibt's nur im Abo."]]];
+const GEN=()=>["SCHEISS ZIVI!","Mimimi. Lern lieber!",`Ich bin nur noch ${String(km).replace(".",",")} km weg. Hast du schon gelernt? Dachte ich mir.`,"Schreib mir nicht, ich hab einen Notfall: deinen Lernstand.","Kein Premium? Peinlich."],PG=["Na, Chef! Alles Premium bei dir 👑","Für dich immer, Chef.","Ich hol dir gleich einen Kaffee ☕"];
+function reply(v){const ty=document.createElement("div");ty.className="bb ch bl";ty.textContent="Charlie tippt …";$("#chb").append(ty);$("#chb").scrollTop=1e9;
+  setTimeout(()=>{ty.remove();rc++;let p=prem?PG:GEN();const h=prem?0:RP.find(r=>r[0].test(v));if(h)p=h[1];say(p[Math.random()*p.length|0],"ch",!prem&&rc%3===0)},900+Math.random()*900)}
+function send(){const i=$("#chi"),v=i.value.trim();if(!v)return;
+  if(!prem){if(coins<1)return say('❌ Nachricht nicht zugestellt: 0 🪙.<br><button class="btn sm" data-g>🎮 Coin-Jagd</button> oder <a href="#freischalten">aufladen</a>',"sys");coins--;st.set("zc_coin",coins);setLim()}
+  i.value="";say(v,"me");reply(v)}
+$("#chsend").onclick=send;$("#chi").onkeydown=e=>{if(e.key==="Enter")send()};
+function charlie(){km=Math.max(.2,+(km-.4).toFixed(1));stat();
+  const T=prem?["Ey Chef, schönen Tag 👑","Soll ich dir Kaffee bringen, Chef?"]:["SCHEISS ZIVI! Ich bin nur noch "+String(km).replace(".",",")+" km weg.","Wo steckst du? Ich hab nach dir gefragt!","Ey, hör auf zu daddeln und lern!"];
+  say(T[Math.random()*T.length|0],"ch",!prem&&!first&&Math.random()<.4);
+  if(first){first=0;openChat()}else if(chat.classList.contains("hide"))toast("🚑 <b>Charlie</b> hat dir geschrieben")}
 setTimeout(charlie,7000);setInterval(charlie,40000);
+// Header-Coins, Spielen-Links, blinkender Tab-Titel
+$("#cc").onclick=()=>{prem||game()};setLim();
+document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("[data-g]"))game()});
+setInterval(()=>{document.title=prem?"ZiviCheat Premium™ 👑":(tb^=1)?"🔥 −87 % NUR HEUTE!":"🚑 Charlie sucht dich!"},1300);
+
 if(!prem){const s=document.createElement("button");s.className="btn sm sup";s.style.cssText="position:fixed;right:14px;bottom:calc(200px + env(safe-area-inset-bottom,0px));z-index:70";s.textContent="💬 Support";s.onclick=()=>modal(`<div style="font-size:44px">🎧</div><h3>Support-Chat</h3><p>Gratis-Wartezeit: <b>47 Tage</b>.<br>Premium-Support: <b>sofort</b> (Antwort: „Haben Sie es mit Premium versucht?“).</p><div class="row"><a class="btn" href="#freischalten" data-x>Premium-Support</a><button class="btn ghost" data-x>Warten</button></div>`);document.body.append(s)}
 let ex=0;document.addEventListener("mouseleave",e=>{if(!prem&&!ex&&e.clientY<5){ex=1;upsell("Warte! Geh nicht ohne Premium.")}});
 </script>
