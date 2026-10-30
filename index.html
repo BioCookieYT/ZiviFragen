@@ -61,7 +61,7 @@ mark{background:rgba(251,191,36,.4);color:inherit;border-radius:3px}
 .box h3{margin:0 0 8px;font-size:24px}.box p{color:var(--mute);margin:0 0 16px}
 .box .row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
 .tiny{font-size:11px;color:#6f6590;display:block;margin-top:12px;cursor:pointer;background:none;border:0;font-family:inherit;width:100%}
-.toast{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:90;max-width:300px;padding:12px 14px;font-size:13px;animation:ti .4s,to .4s 4.6s forwards}
+.toast{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:90;max-width:300px;padding:12px 14px;font-size:13px;animation:ti .4s,to .4s 2.4s forwards}
 @keyframes ti{from{transform:translateX(-120%)}}@keyframes to{to{opacity:0;transform:translateY(20px)}}
 .ck{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:95;max-width:320px;padding:16px;font-size:13px}
 .ck .row{display:flex;gap:8px;align-items:center;margin-top:10px}
@@ -109,9 +109,19 @@ body{padding-bottom:64px}
 .pwh{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 8px;background:linear-gradient(90deg,var(--pk),var(--g));color:#1a0a00;font-weight:800}
 .pwx{border:0;background:#1a0a00;color:#fff;border-radius:6px;width:22px;height:22px;cursor:pointer;font-size:11px}
 .pwb{display:flex;gap:10px;align-items:center;padding:10px}
-.ins{position:fixed;z-index:98;padding:8px 14px;background:#e11d48;color:#fff;font:900 clamp(15px,4vw,22px) system-ui;border-radius:12px;box-shadow:0 0 30px rgba(225,29,72,.8);pointer-events:none;animation:pop .25s,to .3s 2.5s forwards}
+.ins{position:fixed;z-index:98;padding:8px 14px;background:#e11d48;color:#fff;font:900 clamp(15px,4vw,22px) system-ui;border-radius:12px;box-shadow:0 0 30px rgba(225,29,72,.8);pointer-events:none;animation:pop .25s,to .3s 1.4s forwards}
 .ins small{display:block;font-size:10px;font-weight:700;opacity:.85}
 .lbr{display:flex;justify-content:space-between;font-size:14px;padding:4px 0;color:var(--mute)}
+.adslot{margin:12px 0;min-height:70px;border:1px solid var(--gb);border-radius:12px;padding:6px 10px;text-align:center;font-size:10px;color:var(--mute);overflow:hidden;background:var(--glass)}
+.mm{position:fixed;left:10px;top:calc(64px + env(safe-area-inset-top,0px));z-index:45;width:104px;padding:6px;font-size:11px;pointer-events:none;opacity:.9}
+.mmg{position:relative;width:100%;aspect-ratio:1;margin-top:4px;border-radius:8px;border:1px solid var(--gb);overflow:hidden;background:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px) 0 0/25% 25%,linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px) 0 0/25% 25%,#0d0a1c}
+.mmg .me{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c)}
+.mmg .cz{position:absolute;font-style:normal;font-size:16px;transform:translate(-50%,-50%);transition:left 1s linear,top 1s linear}
+.arr{position:fixed;inset:0;z-index:130;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:rgba(225,29,72,.88);color:#fff;text-align:center;padding:20px;animation:pop .25s}
+.arr b{font-size:clamp(28px,8vw,48px)}.arr span{font-size:18px;font-weight:700}
+.rumble{animation:sk .15s 8}
+.mod{overflow-y:auto}.mod .box{max-height:92vh;overflow:auto}
+@media(max-width:600px){.tiers{grid-template-columns:1fr}.hero{padding:16px}.logo{font-size:15px;white-space:nowrap}.top .w{gap:6px;padding:8px 10px}.stk{font-size:12px;gap:6px}.mm{width:76px;font-size:10px}.pw{width:220px}.chat{right:8px;width:calc(100vw - 16px);height:55vh}.mod .box{padding:18px}.q{padding:14px}h2{font-size:16px}}
 </style>
 </head>
 <body>
@@ -138,7 +148,7 @@ const cdh=()=>`<span class="cd">${fmt(secs/60|0)}:${fmt(secs%60)}</span>`;
 function modal(h){const m=document.createElement("div");m.className="mod";m.innerHTML=`<div class="box">${h}</div>`;
   m.onclick=e=>{if(e.target===m||e.target.dataset.x!=null)m.remove()};document.body.append(m);return m}
 function upsell(why){modal(`<div style="font-size:48px">🔒</div><h3>${why||"Das ist Premium-Content"}</h3><p>Schalte alle ${DATA.length} Fragen frei. Nur heute: <b>−87 %</b> – Angebot endet in ${cdh()}. Nur noch <b>3</b> Keys verfügbar!</p><div class="row"><a class="btn" href="#freischalten" data-x>Jetzt freischalten</a><button class="btn ghost" data-x>Ich bleibe ein Loser</button></div><button class="tiny" data-x>Nein danke, ich lerne lieber mit Rätselraten</button>`)}
-function toast(t){const e=document.createElement("div");e.className="toast glass";e.innerHTML=t;document.body.append(e);setTimeout(()=>e.remove(),5200)}
+function toast(t){const e=document.createElement("div");e.className="toast glass";e.innerHTML=t;document.body.append(e);setTimeout(()=>e.remove(),3000)}
 // confetti
 function confetti(){const c=$("#cf"),x=c.getContext("2d");c.width=innerWidth;c.height=innerHeight;
   const P=Array.from({length:160},()=>({x:innerWidth/2,y:innerHeight/3,vx:(Math.random()-.5)*16,vy:-Math.random()*14-3,s:4+Math.random()*6,h:Math.random()*360,r:Math.random()*6}));
@@ -148,6 +158,12 @@ function hl(t,n,tk){if(!tk.length)return esc(t);const r=[];tk.forEach(k=>{let i=
   const m=[];r.forEach(v=>{const l=m[m.length-1];if(l&&v[0]<=l[1])l[1]=Math.max(l[1],v[1]);else m.push(v.slice())});
   const ch=Array.from(t);let o="",p=0;m.forEach(([a,b])=>{o+=esc(ch.slice(p,a).join(""))+"<mark>"+esc(ch.slice(a,b).join(""))+"</mark>";p=b});return o+esc(ch.slice(p).join(""))}
 function setPrem(){$("#tag").textContent=prem?"PREMIUM ✦ PAY2WIN":"FREE";$("#upb").classList.toggle("hide",prem);document.querySelectorAll(".sup").forEach(x=>x.classList.toggle("hide",prem))}
+const ADSENSE="ca-pub-XXXXXXXXXXXXXXXX",SLOT="0000000000"; // <- HIER eigene AdSense-IDs eintragen
+const realAds=/^ca-pub-\d{10,}$/.test(ADSENSE);
+if(realAds&&!prem){const t=document.createElement("script");t.async=1;t.crossOrigin="anonymous";t.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+ADSENSE;document.head.append(t)}
+const HOUSE=[["🚑","Erste-Hilfe-Kurs ab 29 €","Damit du den Zivi auch wiederbeleben kannst."],["☕","Kaffee-Abo für Sanis","Charlie trinkt 14 Tassen am Tag. Du auch bald."],["📚","Fahrschule 'Gas & Gloria'","Bestehen oder Geld zurück* (*nein)."]];
+const adSlot=h=>{if(prem)return"";const x=HOUSE[Math.random()*3|0];return `<div class="adslot"><small>Anzeige</small>${realAds&&!h?`<ins class="adsbygoogle" style="display:block" data-ad-client="${ADSENSE}" data-ad-slot="${SLOT}" data-ad-format="auto" data-full-width-responsive="true"></ins>`:`<a href="#freischalten" style="text-decoration:none;color:var(--tx);display:flex;gap:10px;align-items:center;text-align:left"><span style="font-size:30px">${x[0]}</span><span><b>${x[1]}</b><br><span style="color:var(--mute);font-size:12px">${x[2]}</span></span></a>`}</div>`};
+const initAds=()=>{if(!realAds)return;document.querySelectorAll("ins.adsbygoogle:not([data-d])").forEach(i=>{i.dataset.d=1;try{(window.adsbygoogle=window.adsbygoogle||[]).push({})}catch(e){}})};
 // home
 function home(){
   $("#app").innerHTML=`
@@ -159,7 +175,7 @@ function home(){
   <section class="glass" style="padding:14px 18px;margin-bottom:12px"><b>🏆 Zivi-Rangliste · Season 4</b>
   ${[["👑 ZiviKing_Ultra","9.999 P."],["👑 Sani_Charlie_official","9.871 P."],["👑 ProfiPendler","9.540 P."]].map(r=>`<div class="lbr"><span>${prem?"":""}${r[0]}</span><span>${r[1]}</span></div>`).join("")}
   <div class="lbr" style="${prem?"":"color:var(--pk)"}"><span>${prem?"👑 #1 Du (Pay2Win-Zivi)":"#48.211 Du · Praktikant"}</span><span>${prem?"10.000 P.":"0 P."}</span></div>
-  ${prem?"":`<div style="font-size:12px;color:var(--mute)">Platz 1 gibt's für 14,99 €. Fleiß ist nicht vorgesehen.</div>`}</section><div class="sb"><input id="q" type="search" placeholder="Frage oder Antwort suchen …" autocomplete="off" aria-label="Suche"></div>
+  ${prem?"":`<div style="font-size:12px;color:var(--mute)">Platz 1 gibt's für 14,99 €. Fleiß ist nicht vorgesehen.</div>`}</section>${adSlot()}<div class="sb"><input id="q" type="search" placeholder="Frage oder Antwort suchen …" autocomplete="off" aria-label="Suche"></div>
   <div class="chips" id="chips">${cats.map((c,i)=>`<button class="chip ${i&&!prem?"lc":""}" aria-pressed="${c===cat}" data-c="${esc(c)}">${i&&!prem?"🔒 ":""}${esc(c)}</button>`).join("")}</div>
   <div class="meta"><span id="cnt"></span><span id="lim">${prem?"Suchen: ∞":""}</span></div>
   <div id="qb" class="glass hide" style="padding:12px 16px;margin-bottom:10px"></div><div id="list"></div>`;
@@ -182,9 +198,9 @@ function render(){
   const res=DATA.filter(d=>(cat==="Alle"||d.kat===cat)&&toks.every(t=>d.hay.includes(t)));
   const lockedN=prem?0:res.filter(d=>d.id>=FREE).length;
   $("#cnt").textContent=`${res.length} Treffer`+(lockedN?` · davon ${lockedN} 🔒 gesperrt`:"");
-  $("#list").innerHTML=res.length?res.map(d=>{const lk=!prem&&d.id>=FREE,sh=prem||(!lk&&rev.has(d.id));
-    return `<article class="q glass ${lk?"lk":""}"><div class="in"><div class="k">${esc(d.kat)}</div><h2>${hl(d.frage,d.nf,toks)}</h2><ul>${d.optionen.map((o,i)=>`<li class="${o.r&&sh?"r":""}"><b>${o.r&&sh?"✓":"–"}</b><span>${hl(o.t,d.no[i],toks)}</span></li>`).join("")}</ul></div>${!prem&&!lk&&!sh?`<div style="padding-top:12px"><button class="btn sm" data-r="${d.id}">🪙 Lösung aufdecken (1 Coin)</button></div>`:""}${lk?`<div class="ov"><span>🔒</span><b>Premium-Frage</b><small>Ab 4,99 €/Monat* (Mindestlaufzeit 36 Monate)</small><button class="btn sm" data-u>Freischalten</button></div>`:""}</article>`}).join(""):`<p style="text-align:center;color:var(--mute);padding:40px 0">Keine Treffer. Vielleicht ist die Antwort hinter der Paywall. 😉</p>`;
-  document.querySelectorAll("[data-u]").forEach(b=>b.onclick=()=>upsell("Diese Frage ist gesperrt"));
+  $("#list").innerHTML=res.length?res.map((d,ix)=>{const lk=!prem&&d.id>=FREE,sh=prem||(!lk&&rev.has(d.id));
+    return `<article class="q glass ${lk?"lk":""}"><div class="in"><div class="k">${esc(d.kat)}</div><h2>${hl(d.frage,d.nf,toks)}</h2><ul>${d.optionen.map((o,i)=>`<li class="${o.r&&sh?"r":""}"><b>${o.r&&sh?"✓":"–"}</b><span>${hl(o.t,d.no[i],toks)}</span></li>`).join("")}</ul></div>${!prem&&!lk&&!sh?`<div style="padding-top:12px"><button class="btn sm" data-r="${d.id}">🪙 Lösung aufdecken (1 Coin)</button></div>`:""}${lk?`<div class="ov"><span>🔒</span><b>Premium-Frage</b><small>Ab 4,99 €/Monat* (Mindestlaufzeit 36 Monate)</small><button class="btn sm" data-u>Freischalten</button></div>`:""}</article>`+(ix%4===3?adSlot(1):"")}).join(""):`<p style="text-align:center;color:var(--mute);padding:40px 0">Keine Treffer. Vielleicht ist die Antwort hinter der Paywall. 😉</p>`;
+  initAds();document.querySelectorAll("[data-u]").forEach(b=>b.onclick=()=>upsell("Diese Frage ist gesperrt"));
   document.querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>{if(coins<1)return modal(`<div style="font-size:44px">🪙</div><h3>Keine Coins mehr</h3><p>100 Coins nur 9,99 €. Das sind 0,10 € pro Lösung. Oder Ultra für alles.</p><div class="row"><a class="btn" href="#freischalten" data-x>Coins aufladen</a><button class="btn ghost" data-x data-g>🎮 Coins erspielen</button></div>`);coins--;st.set("zc_coin",coins);setLim();const id=+b.dataset.r;adGate(()=>{rev.add(id);render()})});
 }
 // unlock page
@@ -214,7 +230,7 @@ const names=["Max aus Linz","Lena aus Wien","Jonas aus Graz","Sara aus Innsbruck
 setInterval(()=>{if(!prem&&!document.querySelector(".mod")&&!location.hash)toast(`🔥 <b>${names[Math.random()*5|0]}</b> hat gerade Zivi Ultra gekauft!`)},11000);
 setInterval(()=>{const e=$("#lv");e&&(e.textContent=35+Math.random()*20|0)},3000);
 if(!prem)setTimeout(()=>{const c=document.createElement("div");c.className="ck glass";c.innerHTML=`🍪 Wir verwenden Cookies, Daten und deine Lebenszeit.<div class="row"><button class="btn sm" id="ca">Alles akzeptieren</button><button class="tiny" id="cn" style="width:auto;margin:0">ablehnen</button></div>`;document.body.append(c);
-  $("#ca").onclick=()=>c.remove();$("#cn").onclick=()=>{c.remove();modal(`<div style="font-size:44px">🍪</div><h3>Ablehnen kostet 2,99 €</h3><p>Siehe AGB § 10.</p><div class="row"><button class="btn" data-x>Dann akzeptiere ich</button></div>`)}},2500);
+  setTimeout(()=>c.remove(),5000);$("#ca").onclick=()=>c.remove();$("#cn").onclick=()=>{c.remove();modal(`<div style="font-size:44px">🍪</div><h3>Ablehnen kostet 2,99 €</h3><p>Siehe AGB § 10.</p><div class="row"><button class="btn" data-x>Dann akzeptiere ich</button></div>`)}},2500);
 function lootbox(){const o=["💩 Nichts. Nochmal öffnen für 0,99 €?","🎟️ −3 % Rabatt auf Zivi Ultra (nicht kombinierbar, nicht gültig)","🪙 +0 Coins. Glückwunsch!","👑 LEGENDÄR: 1 Minute Premium! (läuft ab, bevor du es nutzt)","🧦 Ein virtuelles Paar Socken"];
   const m=modal(`<div style="font-size:56px" class="shake">🎁</div><h3>Lootbox wird geöffnet …</h3>`);
   setTimeout(()=>{m.querySelector(".box").innerHTML=`<h3>${o[Math.random()*o.length|0]}</h3><p>Du hast heute keine weiteren Öffnungen. Zusätzliche Lootboxen: 3 für 4,99 €.</p><div class="row"><a class="btn" href="#freischalten" data-x>Mehr Lootboxen</a><button class="btn ghost" data-x>Schließen</button></div>`},1400)}
@@ -222,17 +238,17 @@ function lootbox(){const o=["💩 Nichts. Nochmal öffnen für 0,99 €?","🎟�
 // ===== PAY2WIN ULTRA: Pop-ups, Charlie-Chat, Coin-Jagd =====
 let km=2,nad=0,un=0,rc=0,first=1,tb=0;
 const ADS=[["🎰","GEWINNER!","Du bist der 1.000.000ste Besucher! Gewinn: 0 Coins."],["⚠️","Lernstand in Gefahr","Ohne Premium vergisst du 94 % bis morgen."],["🔥","NUR HEUTE −87 %","Zivi Ultra für 49,99 € statt 399,99 €"],["💘","Sanis in deiner Nähe","3 Rettungssanitäter suchen dich. Premium nötig."],["🛡️","Streak-Schutz","Verlier deine Serie nicht! Nur 1,99 €"],["📦","Coin-Bundle","1000 Coins für 99,99 € – ein Schnäppchen!"],["🦠","Browser zu langsam","Premium macht ihn 400 % schneller (Placebo)."]];
-function spawnAd(){if(prem||nad>=4||document.querySelector(".mod"))return;nad++;const a=ADS[Math.random()*ADS.length|0],w=document.createElement("div");w.className="pw sup";
+function spawnAd(){if(prem||nad>=(innerWidth<600?1:2)||document.querySelector(".mod"))return;nad++;const a=ADS[Math.random()*ADS.length|0],w=document.createElement("div");w.className="pw sup";
   w.style.left=Math.random()*Math.max(0,innerWidth-260)+"px";w.style.top=(80+Math.random()*Math.max(0,innerHeight-260))+"px";
   w.innerHTML=`<div class="pwh"><b class="bl">${a[1]}</b><button class="pwx" aria-label="Schließen">✕</button></div><div class="pwb"><span style="font-size:30px">${a[0]}</span><span>${a[2]}</span></div><a class="btn sm" href="#freischalten" style="margin:0 10px 10px">Jetzt zuschlagen</a>`;
   let c=0;const x=w.querySelector(".pwx");x.onclick=()=>{if(++c<3){w.querySelector(".pwh").style.flexDirection=c%2?"row-reverse":"row";x.textContent=["✕","✖","✘"][c];w.classList.remove("shake");void w.offsetWidth;w.classList.add("shake")}else{w.remove();nad--}};
-  document.body.append(w)}
+  document.body.append(w);setTimeout(()=>{if(w.isConnected){w.remove();nad--}},3500)}
 setTimeout(spawnAd,3500);setInterval(spawnAd,6500);
 // Charlie beleidigt
-const INS=["SCHEISS ZIVI!","SCHEISS ZIVI! LERN!","ZIVI, DU LOSER!","KAFFEE, ZIVI! SOFORT!","SCHEISS ZIVI!!!"],NICE=["Hallo Chef 👑","Respekt, Premium-Zivi!","Charlie holt dir Kaffee ☕"];
+const INS=["SCHEISS ZIVI!","DU WERTLOSER KAFFEEHOLER!","HIRN EINSCHALTEN, DU PRAKTIKANT!","DEIN GEHIRN IST LEERER ALS DER VERBANDSKASTEN!","LERN ENDLICH, DU FAULE SOCKE!","DU FÄHRST WIE DU LERNST: GAR NICHT!","ZIVI, DU VOLLPFOSTEN!","NUTZLOSER ALS EIN BLAULICHT OHNE AKKU!","DU BIST DER GRUND FÜR UNSERE ÜBERSTUNDEN!"],NICE=["Hallo Chef 👑","Respekt, Premium-Zivi!","Charlie holt dir Kaffee ☕"];
 function insult(){setTimeout(insult,6000+Math.random()*7000);if(document.querySelector(".mod")||(prem&&Math.random()<.7))return;
   const e=document.createElement("div");e.className="ins";e.innerHTML=`<small>🚑 Charlie</small>${(prem?NICE:INS)[Math.random()*(prem?NICE:INS).length|0]}`;
-  e.style.left=Math.random()*Math.max(0,innerWidth-260)+"px";e.style.top=(80+Math.random()*Math.max(0,innerHeight-220))+"px";e.style.rotate=(Math.random()*10-5)+"deg";document.body.append(e);setTimeout(()=>e.remove(),2900)}
+  e.style.left=Math.random()*Math.max(0,innerWidth-260)+"px";e.style.top=(80+Math.random()*Math.max(0,innerHeight-220))+"px";e.style.rotate=(Math.random()*10-5)+"deg";document.body.append(e);setTimeout(()=>e.remove(),1800)}
 setTimeout(insult,5000);
 // Werbe-Gate vor Lösung
 function adGate(cb){let n=5;const m=modal(`<div style="font-size:44px">📺</div><h3>Werbung</h3><p>Lösung wird entschlüsselt in <b class="bl" id="ag2">5</b> s …<br><small>Nicht schließen, sonst ist dein Coin weg!</small></p><div class="bar"><i id="agb" style="width:0"></i></div><button class="tiny" data-u3>Werbung überspringen (Premium)</button>`);
@@ -263,19 +279,32 @@ cl.onclick=()=>chat.classList.contains("hide")?openChat():chat.classList.add("hi
 function say(t,k,lock){const d=document.createElement("div");d.className="bb "+k;
   if(k==="sys")d.innerHTML=t;else if(lock){d.innerHTML=`<span class="bk">${esc(t)}</span><button class="btn sm">🔒 Premium zum Lesen</button>`;d.querySelector("button").onclick=()=>upsell("Charlies Nachricht ist Premium")}else d.textContent=t;
   const b=$("#chb");b.append(d);b.scrollTop=b.scrollHeight;if(k==="ch"&&chat.classList.contains("hide")){un++;bd()}}
-const RP=[[/hilfe|antwort|l[oö]sung|frage/i,["Lösungen gibt's nur mit Premium. Selber denken ist Zivi-Arbeit.","Lösung? Kostet 1 Coin, Zivi. Oder 49,99 € im Monat."]],[/^(hi|hallo|hey|servus)/i,["Was willst du, Zivi?","Ich hab Dienst. Du hast Zeit zum Daddeln, oder?"]],[/kaffee/i,["Kaffee? Hol dir selber einen. Oder kauf den Kaffee-Boost ☕ für 1,99 €."]],[/premium|key|schl[uü]ssel/i,["Den Key? Frag nicht mich. Ich bin nur ein armer Sani. (Ich krieg Provision.)"]],[/danke/i,["Danke gibt's nur im Abo."]]];
-const GEN=()=>["SCHEISS ZIVI!","Mimimi. Lern lieber!",`Ich bin nur noch ${String(km).replace(".",",")} km weg. Hast du schon gelernt? Dachte ich mir.`,"Schreib mir nicht, ich hab einen Notfall: deinen Lernstand.","Kein Premium? Peinlich."],PG=["Na, Chef! Alles Premium bei dir 👑","Für dich immer, Chef.","Ich hol dir gleich einen Kaffee ☕"];
+const RP=[[/hilfe|antwort|l[oö]sung|frage/i,["Lösungen gibt's nur mit Premium. Selber denken ist Zivi-Arbeit.","Lösung? Kostet 1 Coin, Zivi. Oder 49,99 € im Monat."]],[/^(hi|hallo|hey|servus)/i,["Was willst du, du Wurm?","Ich hab Dienst. Du hast Zeit zum Daddeln, oder?"]],[/kaffee/i,["Kaffee? Hol dir selber einen, du Schmarotzer. Oder kauf den Kaffee-Boost ☕ für 1,99 €."]],[/premium|key|schl[uü]ssel/i,["Den Key? Frag nicht mich. Ich bin nur ein armer Sani. (Ich krieg Provision.)"]],[/danke/i,["Danke gibt's nur im Abo."]]];
+const GEN=()=>["SCHEISS ZIVI!","Mimimi. Lern lieber, du Nulpe!","Du bist so nutzlos, dass sogar das Tragetuch Mitleid hat.","Dein Lernstand ist ein Totalschaden. Wie du.",`Ich bin nur noch ${String(km).replace(".",",")} km weg. Hast du schon gelernt? Dachte ich mir.`,"Schreib mir nicht, ich hab einen Notfall: deinen Lernstand.","Kein Premium? Armselig. Echt jetzt.","Halt die Klappe und lern, du Vollpfosten!"],PG=["Na, Chef! Alles Premium bei dir 👑","Für dich immer, Chef.","Ich hol dir gleich einen Kaffee ☕"];
 function reply(v){const ty=document.createElement("div");ty.className="bb ch bl";ty.textContent="Charlie tippt …";$("#chb").append(ty);$("#chb").scrollTop=1e9;
   setTimeout(()=>{ty.remove();rc++;let p=prem?PG:GEN();const h=prem?0:RP.find(r=>r[0].test(v));if(h)p=h[1];say(p[Math.random()*p.length|0],"ch",!prem&&rc%3===0)},900+Math.random()*900)}
 function send(){const i=$("#chi"),v=i.value.trim();if(!v)return;
   if(!prem){if(coins<1)return say('❌ Nachricht nicht zugestellt: 0 🪙.<br><button class="btn sm" data-g>🎮 Coin-Jagd</button> oder <a href="#freischalten">aufladen</a>',"sys");coins--;st.set("zc_coin",coins);setLim()}
   i.value="";say(v,"me");reply(v)}
 $("#chsend").onclick=send;$("#chi").onkeydown=e=>{if(e.key==="Enter")send()};
-function charlie(){km=Math.max(.2,+(km-.4).toFixed(1));stat();
-  const T=prem?["Ey Chef, schönen Tag 👑","Soll ich dir Kaffee bringen, Chef?"]:["SCHEISS ZIVI! Ich bin nur noch "+String(km).replace(".",",")+" km weg.","Wo steckst du? Ich hab nach dir gefragt!","Ey, hör auf zu daddeln und lern!"];
+function charlie(){stat();
+  const T=prem?["Ey Chef, schönen Tag 👑","Soll ich dir Kaffee bringen, Chef?"]:["SCHEISS ZIVI! Ich bin nur noch "+String(km).replace(".",",")+" km weg.","Wo steckst du? Ich hab nach dir gefragt!","Ey, hör auf zu daddeln und lern, du Flasche!","Ich seh dich, du faule Sau. Lern!","Bei dir scheitert sogar der Verbandskasten."];
   say(T[Math.random()*T.length|0],"ch",!prem&&!first&&Math.random()<.4);
   if(first){first=0;openChat()}else if(chat.classList.contains("hide"))toast("🚑 <b>Charlie</b> hat dir geschrieben")}
 setTimeout(charlie,7000);setInterval(charlie,40000);
+// Minimap + Charlie-Ankunft
+const mm=document.createElement("div");mm.className="mm glass";mm.innerHTML='<div>🗺️ <b id="mmt"></b></div><div class="mmg"><i class="me"></i><i class="cz" id="mc">🚑</i></div>';document.body.append(mm);
+let cx=50,cy=50;
+function spawnC(){const a=Math.random()*6.283;cx=50+Math.cos(a)*46;cy=50+Math.sin(a)*46;km=4.6;mmDraw()}
+function mmDraw(){const c=$("#mc");c.style.left=cx+"%";c.style.top=cy+"%";$("#mmt").textContent=String(km).replace(".",",")+" km"}
+function arrive(){const o=document.createElement("div");o.className="arr";
+  o.innerHTML=prem?'<div style="font-size:90px">🚑☕</div><b>CHARLIE IST DA</b><span>Kaffee für den Chef 👑</span>':'<div style="font-size:90px">🚑💥</div><b>CHARLIE IST DA!</b><span>SCHEISS ZIVI! '+(coins>0?"Er klaut dir 1 🪙":"Du hast nichts. Wie dein Lernstand.")+"</span>";
+  o.onclick=()=>o.remove();document.body.append(o);const a=$("#app");a.classList.add("rumble");
+  if(!prem&&coins>0){coins--;st.set("zc_coin",coins);setLim()}
+  prem&&confetti();say(prem?"Kaffee ist da, Chef ☕":"ICH BIN DA, DU VERSAGER! Und ich nehm mir deine Coins.","ch");
+  setTimeout(()=>{o.remove();a.classList.remove("rumble")},2600);spawnC()}
+setInterval(()=>{const dx=50-cx,dy=50-cy,d=Math.hypot(dx,dy);if(d<7)return arrive();const k=.9/d;cx+=dx*k;cy+=dy*k;km=+(Math.hypot(50-cx,50-cy)*.1).toFixed(1);mmDraw()},1000);
+spawnC();
 // Header-Coins, Spielen-Links, blinkender Tab-Titel
 $("#cc").onclick=()=>{prem||game()};setLim();
 document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("[data-g]"))game()});
