@@ -113,15 +113,34 @@ body{padding-bottom:64px}
 .ins small{display:block;font-size:10px;font-weight:700;opacity:.85}
 .lbr{display:flex;justify-content:space-between;font-size:14px;padding:4px 0;color:var(--mute)}
 .adslot{margin:12px 0;min-height:70px;border:1px solid var(--gb);border-radius:12px;padding:6px 10px;text-align:center;font-size:10px;color:var(--mute);overflow:hidden;background:var(--glass)}
-.mm{position:fixed;left:10px;top:calc(64px + env(safe-area-inset-top,0px));z-index:45;width:104px;padding:6px;font-size:11px;pointer-events:none;opacity:.9}
-.mmg{position:relative;width:100%;aspect-ratio:1;margin-top:4px;border-radius:8px;border:1px solid var(--gb);overflow:hidden;background:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px) 0 0/25% 25%,linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px) 0 0/25% 25%,#0d0a1c}
-.mmg .me{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c)}
-.mmg .cz{position:absolute;font-style:normal;font-size:16px;transform:translate(-50%,-50%);transition:left 1s linear,top 1s linear}
-.arr{position:fixed;inset:0;z-index:130;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:rgba(225,29,72,.88);color:#fff;text-align:center;padding:20px;animation:pop .25s}
+.mm{position:fixed;left:10px;top:calc(64px + env(safe-area-inset-top,0px));z-index:45;width:132px;padding:7px;pointer-events:none;background:rgba(10,7,20,.82);border:1px solid var(--gb);border-radius:16px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 0 18px rgba(34,211,238,.25);transition:transform .4s,box-shadow .4s,border-color .4s;transform-origin:top left}
+.mmt{font:800 9px/1 system-ui;letter-spacing:.12em;color:var(--c);margin:0 0 5px 2px}
+.mmg{position:relative;width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:1px solid rgba(34,211,238,.5);background:radial-gradient(circle,rgba(34,211,238,.12),rgba(10,7,20,.9) 70%)}
+.mmg .rg{position:absolute;left:50%;top:50%;border:1px dashed rgba(34,211,238,.35);border-radius:50%;transform:translate(-50%,-50%)}
+.r1{width:33%;height:33%}.r2{width:66%;height:66%}
+.mmg::before,.mmg::after{content:"";position:absolute;background:rgba(34,211,238,.2)}.mmg::before{left:50%;top:0;bottom:0;width:1px}.mmg::after{top:50%;left:0;right:0;height:1px}
+.sw{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(34,211,238,.5),transparent 70deg,transparent);animation:spin 2.4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.mmg .me{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px;border-radius:50%;background:var(--c);box-shadow:0 0 0 0 var(--c);animation:pu 1.4s infinite;z-index:2}
+@keyframes pu{70%{box-shadow:0 0 0 12px transparent}to{box-shadow:0 0 0 0 transparent}}
+.mmg .cz{position:absolute;font-style:normal;font-size:19px;line-height:1;transform:translate(-50%,-50%);transition:left 1s linear,top 1s linear;z-index:3;animation:sir .5s steps(2) infinite}
+@keyframes sir{0%{filter:drop-shadow(0 0 6px #3b82f6)}100%{filter:drop-shadow(0 0 7px #ef4444)}}
+.mmg .tr{position:absolute;width:5px;height:5px;margin:-2.5px;border-radius:50%;background:var(--pk);animation:tf 3.5s forwards}
+@keyframes tf{to{opacity:0;transform:scale(.3)}}
+.mmg .pg{position:absolute;width:10px;height:10px;margin:-5px;border-radius:50%;border:2px solid #ef4444;animation:pg 1s forwards}
+@keyframes pg{to{transform:scale(4);opacity:0}}
+.mmf{display:flex;justify-content:space-between;align-items:center;font-size:11px;margin:5px 2px 0;color:var(--mute)}.mmf b{color:var(--tx)}
+.mm.dg{transform:scale(1.25);border-color:#ef4444;box-shadow:0 0 28px rgba(239,68,68,.8);animation:fb2 .6s steps(2) infinite}
+.mm.dg .mmt{color:#ef4444}.mm.dg .mmf b{color:#ef4444}
+@keyframes fb2{50%{box-shadow:0 0 6px rgba(239,68,68,.3)}}
+.vg{position:fixed;inset:0;z-index:44;pointer-events:none;opacity:0;box-shadow:inset 0 0 90px 20px rgba(239,68,68,.6);transition:opacity .5s}.vg.on{opacity:1;animation:vgp .7s steps(2) infinite}@keyframes vgp{50%{opacity:.4}}
+
+.arr{position:fixed;inset:0;z-index:130;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;animation:sr .35s steps(2) infinite;color:#fff;text-align:center;padding:20px;animation:pop .25s}
+.arr{background:rgba(225,29,72,.9)}@keyframes sr{50%{background:rgba(37,99,235,.9)}}
 .arr b{font-size:clamp(28px,8vw,48px)}.arr span{font-size:18px;font-weight:700}
 .rumble{animation:sk .15s 8}
 .mod{overflow-y:auto}.mod .box{max-height:92vh;overflow:auto}
-@media(max-width:600px){.tiers{grid-template-columns:1fr}.hero{padding:16px}.logo{font-size:15px;white-space:nowrap}.top .w{gap:6px;padding:8px 10px}.stk{font-size:12px;gap:6px}.mm{width:76px;font-size:10px}.pw{width:220px}.chat{right:8px;width:calc(100vw - 16px);height:55vh}.mod .box{padding:18px}.q{padding:14px}h2{font-size:16px}}
+@media(max-width:600px){.tiers{grid-template-columns:1fr}.hero{padding:16px}.logo{font-size:15px;white-space:nowrap}.top .w{gap:6px;padding:8px 10px}.stk{font-size:12px;gap:6px}.mm{width:96px;padding:5px}.mmf{font-size:10px}.pw{width:220px}.chat{right:8px;width:calc(100vw - 16px);height:55vh}.mod .box{padding:18px}.q{padding:14px}h2{font-size:16px}}
 </style>
 </head>
 <body>
@@ -245,8 +264,8 @@ function spawnAd(){if(prem||nad>=(innerWidth<600?1:2)||document.querySelector(".
   document.body.append(w);setTimeout(()=>{if(w.isConnected){w.remove();nad--}},3500)}
 setTimeout(spawnAd,3500);setInterval(spawnAd,6500);
 // Charlie beleidigt
-const INS=["SCHEISS ZIVI!","DU WERTLOSER KAFFEEHOLER!","HIRN EINSCHALTEN, DU PRAKTIKANT!","DEIN GEHIRN IST LEERER ALS DER VERBANDSKASTEN!","LERN ENDLICH, DU FAULE SOCKE!","DU FÄHRST WIE DU LERNST: GAR NICHT!","ZIVI, DU VOLLPFOSTEN!","NUTZLOSER ALS EIN BLAULICHT OHNE AKKU!","DU BIST DER GRUND FÜR UNSERE ÜBERSTUNDEN!"],NICE=["Hallo Chef 👑","Respekt, Premium-Zivi!","Charlie holt dir Kaffee ☕"];
-function insult(){setTimeout(insult,6000+Math.random()*7000);if(document.querySelector(".mod")||(prem&&Math.random()<.7))return;
+const INS=["SCHEISS ZIVI!","SCHEISS ZIVI, KAFFEE! ZACKIG!","ZIVI, RTW PUTZEN! SOFORT!","SCHEISS ZIVI, TRAGE HOLEN, DU PFEIFE!","WO BIST DU, SCHEISS ZIVI?! KLO PUTZEN!","DU SCHEISS ZIVI HAST WIEDER DIE KAFFEEMASCHINE GEKILLT!","ZIVI, HALT DIE PAPPN UND LERN!","NEUN MONATE UND KEIN HIRN DAZUGELERNT!","DU HAMPELMANN, BLAULICHT IST KEIN SPIELZEUG!","WER HAT DICH DEPPEN EINGETEILT?!","SCHEISS ZIVI, DU BIST DER GRUND FÜR UNSERE ÜBERSTUNDEN!"],NICE=["Hallo Chef 👑","Respekt, Premium-Zivi!","Charlie holt dir Kaffee ☕"];
+function insult(){setTimeout(insult,3500+Math.random()*4500);if(document.querySelector(".mod")||(prem&&Math.random()<.7))return;
   const e=document.createElement("div");e.className="ins";e.innerHTML=`<small>🚑 Charlie</small>${(prem?NICE:INS)[Math.random()*(prem?NICE:INS).length|0]}`;
   e.style.left=Math.random()*Math.max(0,innerWidth-260)+"px";e.style.top=(80+Math.random()*Math.max(0,innerHeight-220))+"px";e.style.rotate=(Math.random()*10-5)+"deg";document.body.append(e);setTimeout(()=>e.remove(),1800)}
 setTimeout(insult,5000);
@@ -280,7 +299,7 @@ function say(t,k,lock){const d=document.createElement("div");d.className="bb "+k
   if(k==="sys")d.innerHTML=t;else if(lock){d.innerHTML=`<span class="bk">${esc(t)}</span><button class="btn sm">🔒 Premium zum Lesen</button>`;d.querySelector("button").onclick=()=>upsell("Charlies Nachricht ist Premium")}else d.textContent=t;
   const b=$("#chb");b.append(d);b.scrollTop=b.scrollHeight;if(k==="ch"&&chat.classList.contains("hide")){un++;bd()}}
 const RP=[[/hilfe|antwort|l[oö]sung|frage/i,["Lösungen gibt's nur mit Premium. Selber denken ist Zivi-Arbeit.","Lösung? Kostet 1 Coin, Zivi. Oder 49,99 € im Monat."]],[/^(hi|hallo|hey|servus)/i,["Was willst du, du Wurm?","Ich hab Dienst. Du hast Zeit zum Daddeln, oder?"]],[/kaffee/i,["Kaffee? Hol dir selber einen, du Schmarotzer. Oder kauf den Kaffee-Boost ☕ für 1,99 €."]],[/premium|key|schl[uü]ssel/i,["Den Key? Frag nicht mich. Ich bin nur ein armer Sani. (Ich krieg Provision.)"]],[/danke/i,["Danke gibt's nur im Abo."]]];
-const GEN=()=>["SCHEISS ZIVI!","Mimimi. Lern lieber, du Nulpe!","Du bist so nutzlos, dass sogar das Tragetuch Mitleid hat.","Dein Lernstand ist ein Totalschaden. Wie du.",`Ich bin nur noch ${String(km).replace(".",",")} km weg. Hast du schon gelernt? Dachte ich mir.`,"Schreib mir nicht, ich hab einen Notfall: deinen Lernstand.","Kein Premium? Armselig. Echt jetzt.","Halt die Klappe und lern, du Vollpfosten!"],PG=["Na, Chef! Alles Premium bei dir 👑","Für dich immer, Chef.","Ich hol dir gleich einen Kaffee ☕"];
+const GEN=()=>["SCHEISS ZIVI!","Scheiß Zivi, hast du den RTW schon geputzt? Nein? Dachte ich mir.","Ich bin nur noch "+String(km).replace(".",",")+" km weg, Zivi. Dann hol ich dich.","Halt die Pappn, Zivi, und lern!","Kaffee, Zivi! Und zwar zackig, du Pfeife!","Du bist so nutzlos wie ein Zivi ohne Führerschein. Ach warte, bist du ja.","Klo putzen, Zivi. Das kannst du wenigstens.","Kein Premium? Scheiß Zivi, echt armselig."],PG=["Na, Chef! Alles Premium bei dir 👑","Für dich immer, Chef.","Ich hol dir gleich einen Kaffee ☕"];
 function reply(v){const ty=document.createElement("div");ty.className="bb ch bl";ty.textContent="Charlie tippt …";$("#chb").append(ty);$("#chb").scrollTop=1e9;
   setTimeout(()=>{ty.remove();rc++;let p=prem?PG:GEN();const h=prem?0:RP.find(r=>r[0].test(v));if(h)p=h[1];say(p[Math.random()*p.length|0],"ch",!prem&&rc%3===0)},900+Math.random()*900)}
 function send(){const i=$("#chi"),v=i.value.trim();if(!v)return;
@@ -288,22 +307,27 @@ function send(){const i=$("#chi"),v=i.value.trim();if(!v)return;
   i.value="";say(v,"me");reply(v)}
 $("#chsend").onclick=send;$("#chi").onkeydown=e=>{if(e.key==="Enter")send()};
 function charlie(){stat();
-  const T=prem?["Ey Chef, schönen Tag 👑","Soll ich dir Kaffee bringen, Chef?"]:["SCHEISS ZIVI! Ich bin nur noch "+String(km).replace(".",",")+" km weg.","Wo steckst du? Ich hab nach dir gefragt!","Ey, hör auf zu daddeln und lern, du Flasche!","Ich seh dich, du faule Sau. Lern!","Bei dir scheitert sogar der Verbandskasten."];
+  const T=prem?["Ey Chef, schönen Tag 👑","Soll ich dir Kaffee bringen, Chef?"]:["SCHEISS ZIVI! Ich bin nur noch "+String(km).replace(".",",")+" km weg.","Wo steckst du, Scheiß Zivi?! Kaffee!","Hör auf zu daddeln, du faule Sau, und lern!","Zivi! RTW waschen! Bewegung, du Schnecke!","Scheiß Zivi, ich seh dich auf der Karte. Lauf lieber!"];
   say(T[Math.random()*T.length|0],"ch",!prem&&!first&&Math.random()<.4);
   if(first){first=0;openChat()}else if(chat.classList.contains("hide"))toast("🚑 <b>Charlie</b> hat dir geschrieben")}
-setTimeout(charlie,7000);setInterval(charlie,40000);
+setTimeout(charlie,7000);setInterval(charlie,22000);
 // Minimap + Charlie-Ankunft
-const mm=document.createElement("div");mm.className="mm glass";mm.innerHTML='<div>🗺️ <b id="mmt"></b></div><div class="mmg"><i class="me"></i><i class="cz" id="mc">🚑</i></div>';document.body.append(mm);
-let cx=50,cy=50;
-function spawnC(){const a=Math.random()*6.283;cx=50+Math.cos(a)*46;cy=50+Math.sin(a)*46;km=4.6;mmDraw()}
-function mmDraw(){const c=$("#mc");c.style.left=cx+"%";c.style.top=cy+"%";$("#mmt").textContent=String(km).replace(".",",")+" km"}
+const mm=document.createElement("div");mm.className="mm";mm.innerHTML='<div class="mmt">📡 CHARLIE-RADAR</div><div class="mmg" id="mg"><i class="rg r1"></i><i class="rg r2"></i><i class="sw"></i><i class="me"></i><i class="cz" id="mc">🚑</i></div><div class="mmf"><b id="mmt"></b><span id="mme"></span></div>';
+const vg=document.createElement("div");vg.className="vg";document.body.append(mm,vg);
+let cx=50,cy=50,warned=0;
+function spawnC(){const a=Math.random()*6.283;cx=50+Math.cos(a)*44;cy=50+Math.sin(a)*44;km=4.4;warned=0;mmDraw()}
+function mmDraw(){const c=$("#mc"),d=Math.hypot(50-cx,50-cy);c.style.left=cx+"%";c.style.top=cy+"%";$("#mmt").textContent=String(km).replace(".",",")+" km";$("#mme").textContent=d<30?"🚨 GLEICH DA":"ETA "+Math.ceil(d/.9)+"s";mm.classList.toggle("dg",d<30);vg.classList.toggle("on",d<30)}
+function fx(c,x,y){const g=$("#mg"),e=document.createElement("i");e.className=c;e.style.left=x+"%";e.style.top=y+"%";g.append(e);setTimeout(()=>e.remove(),3600)}
 function arrive(){const o=document.createElement("div");o.className="arr";
-  o.innerHTML=prem?'<div style="font-size:90px">🚑☕</div><b>CHARLIE IST DA</b><span>Kaffee für den Chef 👑</span>':'<div style="font-size:90px">🚑💥</div><b>CHARLIE IST DA!</b><span>SCHEISS ZIVI! '+(coins>0?"Er klaut dir 1 🪙":"Du hast nichts. Wie dein Lernstand.")+"</span>";
+  o.innerHTML=prem?'<div style="font-size:90px">🚑☕</div><b>CHARLIE IST DA</b><span>Kaffee für den Chef 👑</span>':'<div style="font-size:90px">🚑💥</div><b>SCHEISS ZIVI!</b><span>Charlie ist da. '+(coins>0?"Er klaut dir 1 🪙":"Du hast nichts. Wie dein Lernstand.")+"</span>";
   o.onclick=()=>o.remove();document.body.append(o);const a=$("#app");a.classList.add("rumble");
   if(!prem&&coins>0){coins--;st.set("zc_coin",coins);setLim()}
-  prem&&confetti();say(prem?"Kaffee ist da, Chef ☕":"ICH BIN DA, DU VERSAGER! Und ich nehm mir deine Coins.","ch");
+  prem&&confetti();say(prem?"Kaffee ist da, Chef ☕":"ICH BIN DA, SCHEISS ZIVI! Und deine Coins gehören jetzt mir.","ch");
   setTimeout(()=>{o.remove();a.classList.remove("rumble")},2600);spawnC()}
-setInterval(()=>{const dx=50-cx,dy=50-cy,d=Math.hypot(dx,dy);if(d<7)return arrive();const k=.9/d;cx+=dx*k;cy+=dy*k;km=+(Math.hypot(50-cx,50-cy)*.1).toFixed(1);mmDraw()},1000);
+setInterval(()=>{const dx=50-cx,dy=50-cy,d=Math.hypot(dx,dy);if(d<7)return arrive();
+  fx("tr",cx,cy);if(d<30)fx("pg",cx,cy);
+  if(d<30&&!warned){warned=1;toast("🚨 <b>Charlie</b> ist fast da!");say(prem?"Bin gleich da, Chef 👑":"ICH SEH DICH, SCHEISS ZIVI! 30 Sekunden!","ch")}
+  const k=.9/d;cx+=dx*k+(Math.random()-.5)*.6;cy+=dy*k+(Math.random()-.5)*.6;km=+(Math.hypot(50-cx,50-cy)*.1).toFixed(1);mmDraw()},1000);
 spawnC();
 // Header-Coins, Spielen-Links, blinkender Tab-Titel
 $("#cc").onclick=()=>{prem||game()};setLim();
