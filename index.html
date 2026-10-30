@@ -109,38 +109,26 @@ body{padding-bottom:64px}
 .pwh{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 8px;background:linear-gradient(90deg,var(--pk),var(--g));color:#1a0a00;font-weight:800}
 .pwx{border:0;background:#1a0a00;color:#fff;border-radius:6px;width:22px;height:22px;cursor:pointer;font-size:11px}
 .pwb{display:flex;gap:10px;align-items:center;padding:10px}
-.ins{position:fixed;z-index:98;padding:8px 14px;background:#e11d48;color:#fff;font:900 clamp(15px,4vw,22px) system-ui;border-radius:12px;box-shadow:0 0 30px rgba(225,29,72,.8);pointer-events:none;animation:pop .25s,to .3s 1.4s forwards}
+.ins{position:fixed;z-index:98;padding:8px 14px;background:#e11d48;color:#fff;font:900 clamp(15px,4vw,22px) system-ui;border-radius:12px;box-shadow:0 0 30px rgba(225,29,72,.8);pointer-events:none;animation:pop .25s,glt .12s steps(2) 4 .25s,to .3s 1.4s forwards}
 .ins small{display:block;font-size:10px;font-weight:700;opacity:.85}
 .lbr{display:flex;justify-content:space-between;font-size:14px;padding:4px 0;color:var(--mute)}
 .adslot{margin:12px 0;min-height:70px;border:1px solid var(--gb);border-radius:12px;padding:6px 10px;text-align:center;font-size:10px;color:var(--mute);overflow:hidden;background:var(--glass)}
-.mm{position:fixed;left:10px;top:calc(64px + env(safe-area-inset-top,0px));z-index:45;width:132px;padding:7px;pointer-events:none;background:rgba(10,7,20,.82);border:1px solid var(--gb);border-radius:16px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 0 18px rgba(34,211,238,.25);transition:transform .4s,box-shadow .4s,border-color .4s;transform-origin:top left}
-.mmt{font:800 9px/1 system-ui;letter-spacing:.12em;color:var(--c);margin:0 0 5px 2px}
-.mmg{position:relative;width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:1px solid rgba(34,211,238,.5);background:radial-gradient(circle,rgba(34,211,238,.12),rgba(10,7,20,.9) 70%)}
-.mmg .rg{position:absolute;left:50%;top:50%;border:1px dashed rgba(34,211,238,.35);border-radius:50%;transform:translate(-50%,-50%)}
-.r1{width:33%;height:33%}.r2{width:66%;height:66%}
-.mmg::before,.mmg::after{content:"";position:absolute;background:rgba(34,211,238,.2)}.mmg::before{left:50%;top:0;bottom:0;width:1px}.mmg::after{top:50%;left:0;right:0;height:1px}
-.sw{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(34,211,238,.5),transparent 70deg,transparent);animation:spin 2.4s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.mmg .me{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px;border-radius:50%;background:var(--c);box-shadow:0 0 0 0 var(--c);animation:pu 1.4s infinite;z-index:2}
-@keyframes pu{70%{box-shadow:0 0 0 12px transparent}to{box-shadow:0 0 0 0 transparent}}
-.mmg .cz{position:absolute;font-style:normal;font-size:19px;line-height:1;transform:translate(-50%,-50%);transition:left 1s linear,top 1s linear;z-index:3;animation:sir .5s steps(2) infinite}
-@keyframes sir{0%{filter:drop-shadow(0 0 6px #3b82f6)}100%{filter:drop-shadow(0 0 7px #ef4444)}}
-.mmg .tr{position:absolute;width:5px;height:5px;margin:-2.5px;border-radius:50%;background:var(--pk);animation:tf 3.5s forwards}
-@keyframes tf{to{opacity:0;transform:scale(.3)}}
-.mmg .pg{position:absolute;width:10px;height:10px;margin:-5px;border-radius:50%;border:2px solid #ef4444;animation:pg 1s forwards}
-@keyframes pg{to{transform:scale(4);opacity:0}}
-.mmf{display:flex;justify-content:space-between;align-items:center;font-size:11px;margin:5px 2px 0;color:var(--mute)}.mmf b{color:var(--tx)}
-.mm.dg{transform:scale(1.25);border-color:#ef4444;box-shadow:0 0 28px rgba(239,68,68,.8);animation:fb2 .6s steps(2) infinite}
-.mm.dg .mmt{color:#ef4444}.mm.dg .mmf b{color:#ef4444}
-@keyframes fb2{50%{box-shadow:0 0 6px rgba(239,68,68,.3)}}
+.mm{position:fixed;left:10px;top:calc(64px + env(safe-area-inset-top,0px));z-index:45;width:158px;padding:6px;pointer-events:none;background:rgba(10,7,20,.88);border:1px solid var(--gb);border-radius:18px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 0 18px rgba(34,211,238,.25);transition:transform .4s,box-shadow .4s,border-color .4s;transform-origin:top left}
+.mmt{font:800 9px/1 system-ui;letter-spacing:.12em;color:var(--c);margin:1px 0 5px 3px}
+.mmg{display:block;width:100%;height:auto;border-radius:50%;border:2px solid rgba(34,211,238,.55);background:#1a1d2b}
+.mmf{display:flex;justify-content:space-between;align-items:center;font-size:11px;margin:5px 3px 0;color:var(--mute)}.mmf b{color:var(--tx)}
+.mm.dg{transform:scale(1.22);border-color:#ef4444;box-shadow:0 0 28px rgba(239,68,68,.85);animation:mms .5s steps(2) infinite}
+.mm.dg .mmt,.mm.dg .mmf b{color:#ef4444}.mm.dg .mmg{border-color:#ef4444}
+@keyframes mms{50%{translate:1px -1px;box-shadow:0 0 8px rgba(239,68,68,.3)}}
 .vg{position:fixed;inset:0;z-index:44;pointer-events:none;opacity:0;box-shadow:inset 0 0 90px 20px rgba(239,68,68,.6);transition:opacity .5s}.vg.on{opacity:1;animation:vgp .7s steps(2) infinite}@keyframes vgp{50%{opacity:.4}}
+@keyframes glt{25%{transform:translate(-4px,2px) skewX(8deg);filter:hue-rotate(90deg)}75%{transform:translate(4px,-2px) skewX(-8deg)}}
 
 .arr{position:fixed;inset:0;z-index:130;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;animation:sr .35s steps(2) infinite;color:#fff;text-align:center;padding:20px;animation:pop .25s}
 .arr{background:rgba(225,29,72,.9)}@keyframes sr{50%{background:rgba(37,99,235,.9)}}
 .arr b{font-size:clamp(28px,8vw,48px)}.arr span{font-size:18px;font-weight:700}
 .rumble{animation:sk .15s 8}
 .mod{overflow-y:auto}.mod .box{max-height:92vh;overflow:auto}
-@media(max-width:600px){.tiers{grid-template-columns:1fr}.hero{padding:16px}.logo{font-size:15px;white-space:nowrap}.top .w{gap:6px;padding:8px 10px}.stk{font-size:12px;gap:6px}.mm{width:96px;padding:5px}.mmf{font-size:10px}.pw{width:220px}.chat{right:8px;width:calc(100vw - 16px);height:55vh}.mod .box{padding:18px}.q{padding:14px}h2{font-size:16px}}
+@media(max-width:600px){.tiers{grid-template-columns:1fr}.hero{padding:16px}.logo{font-size:15px;white-space:nowrap}.top .w{gap:6px;padding:8px 10px}.stk{font-size:12px;gap:6px}.mm{width:108px;padding:5px}.mmf{font-size:10px}.pw{width:220px}.chat{right:8px;width:calc(100vw - 16px);height:55vh}.mod .box{padding:18px}.q{padding:14px}h2{font-size:16px}}
 </style>
 </head>
 <body>
@@ -264,7 +252,7 @@ function spawnAd(){if(prem||nad>=(innerWidth<600?1:2)||document.querySelector(".
   document.body.append(w);setTimeout(()=>{if(w.isConnected){w.remove();nad--}},3500)}
 setTimeout(spawnAd,3500);setInterval(spawnAd,6500);
 // Charlie beleidigt
-const INS=["SCHEISS ZIVI!","SCHEISS ZIVI, KAFFEE! ZACKIG!","ZIVI, RTW PUTZEN! SOFORT!","SCHEISS ZIVI, TRAGE HOLEN, DU PFEIFE!","WO BIST DU, SCHEISS ZIVI?! KLO PUTZEN!","DU SCHEISS ZIVI HAST WIEDER DIE KAFFEEMASCHINE GEKILLT!","ZIVI, HALT DIE PAPPN UND LERN!","NEUN MONATE UND KEIN HIRN DAZUGELERNT!","DU HAMPELMANN, BLAULICHT IST KEIN SPIELZEUG!","WER HAT DICH DEPPEN EINGETEILT?!","SCHEISS ZIVI, DU BIST DER GRUND FÜR UNSERE ÜBERSTUNDEN!"],NICE=["Hallo Chef 👑","Respekt, Premium-Zivi!","Charlie holt dir Kaffee ☕"];
+const INS=["SCHEISS ZIVI!","SCHEISS ZIVI, HAST DEIN HIRN IM SPIND VERGESSEN?!","SCHEISS ZIVI, DER RTW WÄSCHT SICH NED VON ALLEIN!","KAFFEE! JETZT! SONST NACHTSCHICHT IM KELLER, SCHEISS ZIVI!","DU BIST BLUTGRUPPE NULL AHNUNG, ZIVI!","SELBST DIE REANIMATIONSPUPPE HAT MEHR PULS ALS DU!","SCHEISS ZIVI, DES KLO SCHRUBBT SI NED VON SELBER!","FUNKGERÄT IST KEIN SPIELZEUG, DU TSCHAPPERL!","DER VERBANDSKASTEN HAT MEHR GRIPS ALS DU, ZIVI!","NEUN MONATE ZIVILDIENST, NULL GEHIRNZELLEN. RESPEKT!","SCHEISS ZIVI, TRAGESESSEL TRAGT MAN, MAN STREICHELT IHN NED!","DU LERNST WIE EIN WELTMEISTER: IM WEGSCHAUEN!","SCHEISS ZIVI, WER HAT DICH DEPPEN EINGETEILT?!","DU HAST SANITÄTSMATERIAL MIT DEINEM JAUSENSACKERL VERWECHSELT!","DU BIST DER GRUND FÜR UNSERE ÜBERSTUNDEN, SCHEISS ZIVI!"],NICE=["Hallo Chef 👑","Respekt, Premium-Zivi!","Charlie holt dir Kaffee ☕"];
 function insult(){setTimeout(insult,3500+Math.random()*4500);if(document.querySelector(".mod")||(prem&&Math.random()<.7))return;
   const e=document.createElement("div");e.className="ins";e.innerHTML=`<small>🚑 Charlie</small>${(prem?NICE:INS)[Math.random()*(prem?NICE:INS).length|0]}`;
   e.style.left=Math.random()*Math.max(0,innerWidth-260)+"px";e.style.top=(80+Math.random()*Math.max(0,innerHeight-220))+"px";e.style.rotate=(Math.random()*10-5)+"deg";document.body.append(e);setTimeout(()=>e.remove(),1800)}
@@ -299,7 +287,7 @@ function say(t,k,lock){const d=document.createElement("div");d.className="bb "+k
   if(k==="sys")d.innerHTML=t;else if(lock){d.innerHTML=`<span class="bk">${esc(t)}</span><button class="btn sm">🔒 Premium zum Lesen</button>`;d.querySelector("button").onclick=()=>upsell("Charlies Nachricht ist Premium")}else d.textContent=t;
   const b=$("#chb");b.append(d);b.scrollTop=b.scrollHeight;if(k==="ch"&&chat.classList.contains("hide")){un++;bd()}}
 const RP=[[/hilfe|antwort|l[oö]sung|frage/i,["Lösungen gibt's nur mit Premium. Selber denken ist Zivi-Arbeit.","Lösung? Kostet 1 Coin, Zivi. Oder 49,99 € im Monat."]],[/^(hi|hallo|hey|servus)/i,["Was willst du, du Wurm?","Ich hab Dienst. Du hast Zeit zum Daddeln, oder?"]],[/kaffee/i,["Kaffee? Hol dir selber einen, du Schmarotzer. Oder kauf den Kaffee-Boost ☕ für 1,99 €."]],[/premium|key|schl[uü]ssel/i,["Den Key? Frag nicht mich. Ich bin nur ein armer Sani. (Ich krieg Provision.)"]],[/danke/i,["Danke gibt's nur im Abo."]]];
-const GEN=()=>["SCHEISS ZIVI!","Scheiß Zivi, hast du den RTW schon geputzt? Nein? Dachte ich mir.","Ich bin nur noch "+String(km).replace(".",",")+" km weg, Zivi. Dann hol ich dich.","Halt die Pappn, Zivi, und lern!","Kaffee, Zivi! Und zwar zackig, du Pfeife!","Du bist so nutzlos wie ein Zivi ohne Führerschein. Ach warte, bist du ja.","Klo putzen, Zivi. Das kannst du wenigstens.","Kein Premium? Scheiß Zivi, echt armselig."],PG=["Na, Chef! Alles Premium bei dir 👑","Für dich immer, Chef.","Ich hol dir gleich einen Kaffee ☕"];
+const GEN=()=>["SCHEISS ZIVI!","Scheiß Zivi, hast du den RTW schon geputzt? Nein? Dachte ich mir.","Ich bin nur noch "+String(km).replace(".",",")+" km weg, Zivi. Dann hol ich dich.","Hirn im Spind vergessen, Scheiß Zivi? Lern endlich!","Kaffee, Zivi! Zackig! Oder willst du Kellerschicht?","Selbst die Reanimationspuppe hat mehr Puls als du.","Klo schrubben, Zivi. Das kannst du wenigstens.","Du Tschapperl, du bist Blutgruppe Null Ahnung.","Kein Premium? Scheiß Zivi, echt armselig."],PG=["Na, Chef! Alles Premium bei dir 👑","Für dich immer, Chef.","Ich hol dir gleich einen Kaffee ☕"];
 function reply(v){const ty=document.createElement("div");ty.className="bb ch bl";ty.textContent="Charlie tippt …";$("#chb").append(ty);$("#chb").scrollTop=1e9;
   setTimeout(()=>{ty.remove();rc++;let p=prem?PG:GEN();const h=prem?0:RP.find(r=>r[0].test(v));if(h)p=h[1];say(p[Math.random()*p.length|0],"ch",!prem&&rc%3===0)},900+Math.random()*900)}
 function send(){const i=$("#chi"),v=i.value.trim();if(!v)return;
@@ -307,28 +295,68 @@ function send(){const i=$("#chi"),v=i.value.trim();if(!v)return;
   i.value="";say(v,"me");reply(v)}
 $("#chsend").onclick=send;$("#chi").onkeydown=e=>{if(e.key==="Enter")send()};
 function charlie(){stat();
-  const T=prem?["Ey Chef, schönen Tag 👑","Soll ich dir Kaffee bringen, Chef?"]:["SCHEISS ZIVI! Ich bin nur noch "+String(km).replace(".",",")+" km weg.","Wo steckst du, Scheiß Zivi?! Kaffee!","Hör auf zu daddeln, du faule Sau, und lern!","Zivi! RTW waschen! Bewegung, du Schnecke!","Scheiß Zivi, ich seh dich auf der Karte. Lauf lieber!"];
+  const T=prem?["Ey Chef, schönen Tag 👑","Soll ich dir Kaffee bringen, Chef?"]:["SCHEISS ZIVI! Ich bin nur noch "+String(km).replace(".",",")+" km weg.","Wo steckst du, Scheiß Zivi?! Kaffee, aber zackig!","Hör auf zu daddeln, du faule Sau, und lern!","Zivi! RTW waschen! Bewegung, du Schnecke!","Scheiß Zivi, ich seh dich auf dem GPS. Lauf lieber!","Dienstführer fragt, wo du bist. Ich auch, du Trottel!"];
   say(T[Math.random()*T.length|0],"ch",!prem&&!first&&Math.random()<.4);
   if(first){first=0;openChat()}else if(chat.classList.contains("hide"))toast("🚑 <b>Charlie</b> hat dir geschrieben")}
 setTimeout(charlie,7000);setInterval(charlie,22000);
-// Minimap + Charlie-Ankunft
-const mm=document.createElement("div");mm.className="mm";mm.innerHTML='<div class="mmt">📡 CHARLIE-RADAR</div><div class="mmg" id="mg"><i class="rg r1"></i><i class="rg r2"></i><i class="sw"></i><i class="me"></i><i class="cz" id="mc">🚑</i></div><div class="mmf"><b id="mmt"></b><span id="mme"></span></div>';
+// Minimap (GTA-Style) + Charlie-Ankunft
+const mm=document.createElement("div");mm.className="mm";mm.innerHTML='<div class="mmt">📡 CHARLIE-GPS</div><canvas class="mmg" id="mg" width="320" height="320"></canvas><div class="mmf"><b id="mmt"></b><span id="mme"></span></div>';
 const vg=document.createElement("div");vg.className="vg";document.body.append(mm,vg);
-let cx=50,cy=50,warned=0;
-function spawnC(){const a=Math.random()*6.283;cx=50+Math.cos(a)*44;cy=50+Math.sin(a)*44;km=4.4;warned=0;mmDraw()}
-function mmDraw(){const c=$("#mc"),d=Math.hypot(50-cx,50-cy);c.style.left=cx+"%";c.style.top=cy+"%";$("#mmt").textContent=String(km).replace(".",",")+" km";$("#mme").textContent=d<30?"🚨 GLEICH DA":"ETA "+Math.ceil(d/.9)+"s";mm.classList.toggle("dg",d<30);vg.classList.toggle("on",d<30)}
-function fx(c,x,y){const g=$("#mg"),e=document.createElement("i");e.className=c;e.style.left=x+"%";e.style.top=y+"%";g.append(e);setTimeout(()=>e.remove(),3600)}
+const MX=[8,28,50,74,92],MY=[10,32,50,70,90],S=3.2,cv=$("#mg"),cg=cv.getContext("2d");
+let sd=7;const rn=()=>(sd=sd*16807%2147483647)/2147483647;
+const base=document.createElement("canvas");base.width=base.height=320;
+(function(){const g=base.getContext("2d"),X=v=>v*S;g.fillStyle="#222838";g.fillRect(0,0,320,320);
+  for(let k=0;k<90;k++){const x=rn()*100,y=rn()*100;if(x<MX[0]-3||x>MX[4]+3||y<MY[0]-3||y>MY[4]+3){g.fillStyle=["#2f364a","#363e55","#2a3144"][k%3];g.fillRect(X(x),X(y),X(2+rn()*5),X(2+rn()*5))}}
+  for(let i=0;i<4;i++)for(let j=0;j<4;j++){const x0=MX[i]+2.2,y0=MY[j]+2.2,w=MX[i+1]-MX[i]-4.4,h=MY[j+1]-MY[j]-4.4,park=(i*2+j*3)%7===2;
+    g.fillStyle=park?"#1d4a33":"#2c3347";g.fillRect(X(x0),X(y0),X(w),X(h));
+    if(park){for(let k=0;k<14;k++){g.fillStyle=k%2?"#2a6b46":"#235a3a";g.beginPath();g.arc(X(x0+1+rn()*(w-2)),X(y0+1+rn()*(h-2)),X(1.3+rn()),0,6.3);g.fill()}}
+    else for(let k=0;k<7;k++){const bw=3+rn()*6,bh=3+rn()*6,bx=x0+.6+rn()*Math.max(0,w-bw-1.2),by=y0+.6+rn()*Math.max(0,h-bh-1.2);g.fillStyle=["#3b4560","#434e6b","#394159","#4d5a7c"][rn()*4|0];g.fillRect(X(bx),X(by),X(bw),X(bh));g.fillStyle="rgba(255,255,255,.07)";g.fillRect(X(bx),X(by),X(bw),X(.5))}}
+  g.lineCap="round";g.strokeStyle="#1b5a8c";g.lineWidth=X(6);g.beginPath();g.moveTo(X(-5),X(18));g.bezierCurveTo(X(30),X(8),X(40),X(45),X(65),X(42));g.bezierCurveTo(X(85),X(40),X(90),X(80),X(105),X(78));g.stroke();
+  g.strokeStyle="#2d7ab5";g.lineWidth=X(4.2);g.stroke();
+  g.lineCap="butt";const road=(w,c,d)=>{g.strokeStyle=c;g.lineWidth=X(w);g.setLineDash(d||[]);g.beginPath();MX.forEach(x=>{g.moveTo(X(x),X(-2));g.lineTo(X(x),X(102))});MY.forEach(y=>{g.moveTo(X(-2),X(y));g.lineTo(X(102),X(y))});g.stroke()};
+  road(4.4,"#161a26");road(3.6,"#59627a");road(.35,"#e7c75a",[X(1.4),X(1.2)]);g.setLineDash([]);
+  g.fillStyle="#7d88a6";g.font="bold "+X(2.2)+"px system-ui";["Hauptstr.","Bahnhofstr.","Ring"].forEach((n,i)=>{g.save();g.translate(X(MX[i+1]+.6),X(14+i*6));g.rotate(Math.PI/2);g.fillText(n,0,0);g.restore()});
+  g.fillText("Klinikweg",X(52),X(MY[1]-.8))})();
+let P=[],L=[],TL=0,prog=0,warned=0,tr=[],lt=0,lq=0,dg0=0,ltx="";
+function newRun(){const sd2=Math.random()*4|0,r=Math.random()*5|0;let a=[0,4,r,r][sd2],b=[r,r,0,4][sd2];
+  P=[[MX[a],MY[b]]];while(a!==2||b!==2){const mv=a!==2&&(b===2||Math.random()<.5)?0:1;mv?b+=b<2?1:-1:a+=a<2?1:-1;P.push([MX[a],MY[b]])}
+  L=[];TL=0;for(let k=1;k<P.length;k++){const d=Math.hypot(P[k][0]-P[k-1][0],P[k][1]-P[k-1][1]);L.push(d);TL+=d}prog=0;warned=0;tr=[]}
+function at(p){let k=0;while(k<L.length-1&&p>L[k]){p-=L[k];k++}const f=Math.min(1,p/L[k]),A=P[k],B=P[k+1];return[A[0]+(B[0]-A[0])*f,A[1]+(B[1]-A[1])*f,Math.atan2(B[1]-A[1],B[0]-A[0]),k]}
+let ac;addEventListener("pointerdown",()=>{if(!ac)try{ac=new(window.AudioContext||window.webkitAudioContext)()}catch(e){}},{once:true});
+function siren(n){if(!ac)return;try{const o=ac.createOscillator(),g=ac.createGain(),t=ac.currentTime;o.type="square";g.gain.value=.025;o.connect(g);g.connect(ac.destination);for(let i=0;i<n;i++)o.frequency.setValueAtTime(i%2?960:770,t+i*.35);o.start(t);o.stop(t+n*.35)}catch(e){}}
 function arrive(){const o=document.createElement("div");o.className="arr";
   o.innerHTML=prem?'<div style="font-size:90px">🚑☕</div><b>CHARLIE IST DA</b><span>Kaffee für den Chef 👑</span>':'<div style="font-size:90px">🚑💥</div><b>SCHEISS ZIVI!</b><span>Charlie ist da. '+(coins>0?"Er klaut dir 1 🪙":"Du hast nichts. Wie dein Lernstand.")+"</span>";
   o.onclick=()=>o.remove();document.body.append(o);const a=$("#app");a.classList.add("rumble");
   if(!prem&&coins>0){coins--;st.set("zc_coin",coins);setLim()}
-  prem&&confetti();say(prem?"Kaffee ist da, Chef ☕":"ICH BIN DA, SCHEISS ZIVI! Und deine Coins gehören jetzt mir.","ch");
-  setTimeout(()=>{o.remove();a.classList.remove("rumble")},2600);spawnC()}
-setInterval(()=>{const dx=50-cx,dy=50-cy,d=Math.hypot(dx,dy);if(d<7)return arrive();
-  fx("tr",cx,cy);if(d<30)fx("pg",cx,cy);
-  if(d<30&&!warned){warned=1;toast("🚨 <b>Charlie</b> ist fast da!");say(prem?"Bin gleich da, Chef 👑":"ICH SEH DICH, SCHEISS ZIVI! 30 Sekunden!","ch")}
-  const k=.9/d;cx+=dx*k+(Math.random()-.5)*.6;cy+=dy*k+(Math.random()-.5)*.6;km=+(Math.hypot(50-cx,50-cy)*.1).toFixed(1);mmDraw()},1000);
-spawnC();
+  confetti();siren(8);say(prem?"Kaffee ist da, Chef ☕":"ICH BIN DA, SCHEISS ZIVI! Deine Coins gehören jetzt mir.","ch");
+  setTimeout(()=>{o.remove();a.classList.remove("rumble")},2600)}
+function frame(t){requestAnimationFrame(frame);const dt=Math.min(.1,(t-lt)/1000||0);lt=t;const T=t/1000,rem=Math.max(0,TL-prog),dg=rem<28;
+  prog+=dt*(dg?2.4:2);if(prog>=TL){arrive();newRun();return}
+  const[x,y,ang,k]=at(prog);km=+(rem*.06).toFixed(1);
+  const tx=String(km).replace(".",",")+" km|"+(dg?"🚨 GLEICH DA":"ETA "+Math.ceil(rem/2.1)+"s");if(tx!==ltx){ltx=tx;const q=tx.split("|");$("#mmt").textContent=q[0];$("#mme").textContent=q[1]}
+  if(dg!==dg0){dg0=dg;mm.classList.toggle("dg",dg);vg.classList.toggle("on",dg)}
+  if(dg&&!warned){warned=1;siren(6);toast("🚨 <b>Charlie</b> ist fast da!");say(prem?"Bin gleich da, Chef 👑":"ICH SEH DICH, SCHEISS ZIVI! Gleich bin ich da!","ch")}
+  if(T-lq>.12){lq=T;tr.push([x,y]);if(tr.length>22)tr.shift()}
+  cg.setTransform(1,0,0,1,0,0);cg.drawImage(base,0,0);cg.setTransform(S,0,0,S,0,0);
+  const ph=(T*6|0)%2;
+  // GPS-Route
+  cg.lineCap="round";cg.lineJoin="round";cg.strokeStyle="rgba(255,70,90,.95)";cg.lineWidth=1.3;cg.setLineDash([2.2,1.6]);cg.lineDashOffset=-T*9;cg.beginPath();cg.moveTo(x,y);for(let m=k+1;m<P.length;m++)cg.lineTo(P[m][0],P[m][1]);cg.stroke();cg.setLineDash([]);
+  // Spur
+  tr.forEach((p,i)=>{cg.fillStyle="rgba(255,61,129,"+(i/tr.length*.7)+")";cg.beginPath();cg.arc(p[0],p[1],.5+i/tr.length*.6,0,6.3);cg.fill()});
+  // Sirenen-Licht
+  cg.globalCompositeOperation="lighter";const c=ph?"60,110,255":"255,50,60",r=dg?28:19,gr=cg.createRadialGradient(x,y,0,x,y,r);gr.addColorStop(0,"rgba("+c+",.75)");gr.addColorStop(1,"rgba("+c+",0)");cg.fillStyle=gr;cg.fillRect(x-r,y-r,r*2,r*2);cg.globalCompositeOperation="source-over";
+  // Spieler + Pings
+  const pr=2.4+(Math.sin(T*4)+1)*1.6;cg.strokeStyle="rgba(34,211,238,.55)";cg.lineWidth=.6;cg.beginPath();cg.arc(50,50,pr,0,6.3);cg.stroke();
+  if(dg)for(let n=0;n<2;n++){const f=(T*1.3+n*.5)%1;cg.strokeStyle="rgba(239,68,68,"+(1-f)+")";cg.lineWidth=.8;cg.beginPath();cg.arc(50,50,f*22,0,6.3);cg.stroke()}
+  cg.fillStyle="#22d3ee";cg.strokeStyle="#fff";cg.lineWidth=.5;cg.beginPath();cg.moveTo(50,46.6);cg.lineTo(52.6,52.4);cg.lineTo(50,51);cg.lineTo(47.4,52.4);cg.closePath();cg.fill();cg.stroke();
+  // Auto
+  cg.save();cg.translate(x,y);cg.rotate(ang);cg.fillStyle="#fff";cg.fillRect(-3.4,-1.8,6.8,3.6);cg.fillStyle="#2a3144";cg.fillRect(.4,-1.4,1.6,2.8);cg.fillRect(-2.6,-1.4,.9,2.8);cg.fillStyle=ph?"#3b6eff":"#ff3040";cg.fillRect(-.6,-1.8,1.2,1.8);cg.fillStyle=ph?"#ff3040":"#3b6eff";cg.fillRect(-.6,0,1.2,1.8);cg.restore();
+  // Label
+  const lx=Math.min(84,Math.max(16,x)),ly=Math.max(8,y-5);cg.font="bold 3.4px system-ui";cg.textAlign="center";cg.fillStyle="#e11d48";cg.fillRect(lx-8,ly-3.3,16,4.4);cg.fillStyle="#fff";cg.fillText("CHARLIE",lx,ly);cg.textAlign="left";
+  // Vignette + Glitch
+  cg.setTransform(1,0,0,1,0,0);const vgd=cg.createRadialGradient(160,160,90,160,160,170);vgd.addColorStop(0,"rgba(5,3,12,0)");vgd.addColorStop(1,"rgba(5,3,12,.8)");cg.fillStyle=vgd;cg.fillRect(0,0,320,320);
+  if(dg){cg.fillStyle="rgba(255,0,40,"+(.08+.1*ph)+")";cg.fillRect(0,0,320,320);for(let q=0;q<2;q++){const sy=Math.random()*310;cg.drawImage(cv,0,sy,320,7,(Math.random()-.5)*14,sy,320,7)}}}
+newRun();requestAnimationFrame(frame);
 // Header-Coins, Spielen-Links, blinkender Tab-Titel
 $("#cc").onclick=()=>{prem||game()};setLim();
 document.addEventListener("click",e=>{if(e.target.closest&&e.target.closest("[data-g]"))game()});
